@@ -3,6 +3,8 @@ import { useForm, useWatch } from "react-hook-form";
 import { Disclosure, Transition } from "@headlessui/react";
 
 const PopupWidget = () => {
+  const apikey = process.env.API_KEY;
+  console.log(apikey);
   const {
     register,
     handleSubmit,
@@ -116,7 +118,7 @@ const PopupWidget = () => {
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
                         type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
+                        value={apikey}
                         {...register("apikey")}
                       />
                       <input
