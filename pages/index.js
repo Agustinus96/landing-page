@@ -11,6 +11,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -27,27 +28,26 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="Gloxus Benefits"
+        title=" Why you should use our platform">
+        Gloxus transforms hiring in Japan, offering a personalized, 
+        quality experience for both employers and candidates, enhancing efficiency 
+        and cultural alignment for more effective, satisfying recruitment outcomes.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+        title="See our platform at work">
+          Make a video. 
       </SectionTitle>
       <Video />
       <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        pretitle="Future Testimonials"
+        title="Releasing a Closed Trial">
+        We are looking for partners to participate in our limited MVP release. 
+        Your feedback is very important to us to further develop this platform 
+        and ensure that our product fits your needs.
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
@@ -55,7 +55,12 @@ const Home = () => {
         conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <Cta />
+      <div className="flex w-full items-center justify-center text-center">
+          <Link href="/faq" className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5">
+              show more
+          </Link>
+        </div>
+      {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>

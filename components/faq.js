@@ -17,7 +17,7 @@ const Faq = () => {
                     <ChevronUpIcon
                       className={`${
                         open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-indigo-500`}
+                      } w-5 h-5 text-emerald-500`}
                     />
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
@@ -35,23 +35,67 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What is Gloxus",
+    answer: "Gloxus is a specualized SaaS platform designed to optimize the hiring process in Japan, focusing on cultural fit and efficiency.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "How does Gloxus improve the hiring experience?",
+    answer: "Our platform personalizes the hiring experience, emphasizing cultural alignment and efficiency, leading to more satisfying and effective recruitment outcomes for both employers and candidates.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "Who can benefit from using Gloxus? ",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Gloxus is ideal for businesses of all sizes in Japan looking to streamline their recruitment process, as well as job seekers seeking a culturally aligned workplace.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "Is Gloxus suitable for international companies hiring in Japan? ",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes, Gloxus is perfect for international companies looking to navigate the unique cultural and linguistic landscape of the Japanese job market.",
   },
+  // {
+  //   question: "How does Gloxus ensure a good cultural fit?",
+  // answer: "We utilize advanced algorithms and localized insights to match candidates with companies where they'll thrive, considering both skills and cultural nuances.",
+  // },
+  // {
+  //   question: "What languages does Gloxus support?",
+  // answer: "Gloxus supports both Japanese and English, facilitating seamless communication between employers and potential employees.",
+  // },
+  // {
+  //   question: "Is there a trial period for Gloxus?",
+  // answer: "Yes, we offer a trial period. Please contact us for more details on how to get started.",
+  // },
+  // {
+  //   question: "How does Gloxus handle data privacy and security?",
+  // answer: "We adhere to strict data privacy and security protocols to protect all user information on our platform.",
+  // },
+  // {
+  //   question: "Can Gloxus integrate with our existing HR systems?",
+  // answer: "Yes, Gloxus is designed to integrate seamlessly with a variety of HR systems to enhance your existing workflows.",
+  // },
+  // {
+  //   question: "How do I get started with Gloxus?",
+  // answer: "You can sign up directly on our website or contact our sales team for a personalized walkthrough of our platform.",
+  // },
+  // {
+  //   question: "What customer support does Gloxus offer?",
+  // answer: "We provide comprehensive customer support, including a dedicated help center, live chat, and email assistance.",
+  // },
+  // {
+  //   question: "Are there any customization options available in Gloxus?",
+  // answer: "Yes, Gloxus offers various customization options to tailor the platform to your specific hiring needs and preferences.",
+  // },
+  // {
+  //   question: "What makes Gloxus unique compared to other hiring platforms?",
+  // answer: "Gloxus is uniquely designed for the Japanese market, with a strong emphasis on cultural fit and bilingual support, setting it apart from other platforms.",
+  // },
+  // {
+  //   question: "How often is Gloxus updated with new features?",
+  // answer: "We continuously update Gloxus with new features and improvements based on user feedback and market trends.",
+  // },
+  // {
+  //   question: "How can I provide feedback or suggest features for Gloxus?",
+  // answer: "We value user feedback! You can submit your suggestions through our website or contact our support team directly.",
+  // },
 ];
 
 export default Faq;
