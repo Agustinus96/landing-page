@@ -4,7 +4,6 @@ import { Disclosure, Transition } from "@headlessui/react";
 
 const PopupWidget = () => {
   const apikey = process.env.API_KEY;
-  console.log(apikey);
   const {
     register,
     handleSubmit,

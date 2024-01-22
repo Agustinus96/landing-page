@@ -1,22 +1,22 @@
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
+import Container from "../container";
 
-const Benefits = (props) => {
+const Features = (props) => {
   const { data } = props;
   return (
     <>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap mx-auto">
         <div
-          className={`flex items-center justify-center w-full lg:w-1/2 ${
+          className={`flex items-center justify-center w-full lg:w-1/2 blur-[3px] hover:blur-0 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}>
           <div>
             <Image
               src={data.image}
-              width="521"
+              width="720"
               height="auto"
-              alt="Benefits"
+              alt="Features"
               className={"object-cover"}
               placeholder="blur"
               blurDataURL={data.image.src}
@@ -41,9 +41,9 @@ const Benefits = (props) => {
 
             <div className="w-full mt-5">
               {data.bullets.map((item, index) => (
-                <Benefit key={index} title={item.title} icon={item.icon}>
+                <Feature key={index} title={item.title} icon={item.icon}>
                   {item.desc}
-                </Benefit>
+                </Feature>
               ))}
             </div>
           </div>
@@ -53,7 +53,7 @@ const Benefits = (props) => {
   );
 };
 
-function Benefit(props) {
+function Feature(props) {
   return (
     <>
       <div className="flex items-start mt-8 space-x-3">
@@ -75,4 +75,4 @@ function Benefit(props) {
   );
 }
 
-export default Benefits;
+export default Features;

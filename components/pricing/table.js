@@ -1,35 +1,22 @@
-import Image from "next/image";
-import React from "react";
-import Container from "./container";
 
-const Benefits = (props) => {
+import React from "react";
+import Container from "../container";
+
+const Tables = (props) => {
   const { data } = props;
   return (
     <>
-      <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap mx-auto">
-        <div
-          className={`flex items-center justify-center w-full lg:w-1/2 ${
-            props.imgPos === "right" ? "lg:order-1" : ""
-          }`}>
+      <Container className="flex flex-row lg:gap-10 lg:w-min-[80%] w-[80%] item-center mx-[5%]">
+        {/* <div
+          className="flex items-center justify-center h-full lg:w-1/2 blur-[3px] hover:blur-0">
           <div>
-            <Image
-              src={data.image}
-              width="521"
-              height="auto"
-              alt="Benefits"
-              className={"object-cover"}
-              placeholder="blur"
-              blurDataURL={data.image.src}
-            />
           </div>
-        </div>
+        </div> */}
 
         <div
-          className={`flex flex-wrap items-center w-full lg:w-1/2 ${
-            data.imgPos === "right" ? "lg:justify-end" : ""
-          }`}>
+          className={`flex flex-wrap items-center lg:w-[100%] w-[100%] mx-[5%] lg:mx-auto p-10 dark:border-white border border-black`}>
           <div>
-            <div className="flex flex-col w-full mt-4">
+            <div className="flex flex-col w-full my-auto">
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                 {data.title}
               </h3>
@@ -39,11 +26,11 @@ const Benefits = (props) => {
               </p>
             </div>
 
-            <div className="w-full mt-5">
+            <div className="lg:w-[100%] w-[80%] my-auto">
               {data.bullets.map((item, index) => (
-                <Benefit key={index} title={item.title} icon={item.icon}>
+                <Table key={index} title={item.title} icon={item.icon}>
                   {item.desc}
-                </Benefit>
+                </Table>
               ))}
             </div>
           </div>
@@ -53,7 +40,7 @@ const Benefits = (props) => {
   );
 };
 
-function Benefit(props) {
+function Table(props) {
   return (
     <>
       <div className="flex items-start mt-8 space-x-3">
@@ -75,4 +62,4 @@ function Benefit(props) {
   );
 }
 
-export default Benefits;
+export default Tables;
