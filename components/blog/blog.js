@@ -9,7 +9,7 @@ export default function Blogs() {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Blogs - in progress</title>
         <meta
           name="description"
           content="Nextly is a free landing page template built with next.js & Tailwind CSS"
@@ -18,12 +18,10 @@ export default function Blogs() {
       </Head>
       <Navbar />
       <SectionTitle
-        pretitle="Gloxus Benefits"
-        title=" Why you should use our platform"
+        pretitle="Building"
+        title=" We are preparing useful information"
       >
-        Gloxus transforms hiring in Japan, offering a personalized, quality
-        experience for both employers and candidates, enhancing efficiency and
-        cultural alignment for more effective, satisfying recruitment outcomes.
+        We would like to share insights of hiring in Japan and perhaps future events.
       </SectionTitle>
 
       <Footer />
