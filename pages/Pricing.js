@@ -12,6 +12,7 @@ const Pricing = () => {
     return (
         <>
         <Soon />
+        <PopupWidget />
         </>
         // <> 
         // <Navbar />

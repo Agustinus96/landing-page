@@ -4,8 +4,10 @@ import Footer from "../components/footer";
 import PopupWidget from "../components/popupWidget";
 import Head from "next/head";
 import HeroServices from "../components/services/hero-services";
+import Products from "../components/services/product";
+import { productOne } from "../components/services/product-data";
 
-const feature = () => {
+const heroService = () => {
   return (
     <> 
     <Navbar />
@@ -18,10 +20,11 @@ const feature = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroServices />
+      <Products data={productOne}/>
     <Footer />
     <PopupWidget />
     </>
   );
 }
 
-export default feature;
+export default heroService;
