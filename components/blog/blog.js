@@ -4,7 +4,16 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import SectionTitle from "../sectionTitle";
 import PopupWidget from "../popupWidget";
-import { Container } from "postcss";
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
 
 export default function Blogs() {
   return (

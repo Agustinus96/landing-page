@@ -34,7 +34,7 @@ const Teams = (props) => {
                 {data.title}
               </h3>
 
-              <p className="lg:max-w-4xl max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+              <p className="lg:max-w-5xl max-w-2xl py-4 text-lg text-justify leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
                 {data.desc}
               </p>
             </div>
