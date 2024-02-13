@@ -36,7 +36,7 @@ export default function Home({ posts }) {
   return (
     <>
     <Head>
-        <title>Blogs - in progress</title>
+        <title>Blogs - testing</title>
         <meta
           name="description"
           content="Nextly is a free landing page template built with next.js & Tailwind CSS"
