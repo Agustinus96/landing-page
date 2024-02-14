@@ -20,7 +20,8 @@ import PopupWidget from '../components/popupWidget';
 import SectionTitle from '../components/sectionTitle';
 // import styles from '../styles/Home.module.css';
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
+  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
   const res = await fetch(`/api/posts`);
   const posts = await res.json();
 
