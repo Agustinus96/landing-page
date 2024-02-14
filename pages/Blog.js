@@ -30,16 +30,13 @@ try {
   const res = await fetch(`YOUR_API_ENDPOINT`);
   if (!res.ok) {
     throw new Error(`Failed to fetch, status: ${res.status}`);
-  }
+  }g
   const data = await res.json();
-  return { props: { data } };
+  return { props: { posts } };
 } catch (error) {
   console.error(error);
   return { props: { error: error.message } };
 }
-
-
-  return { props: { posts } };
 }_
 
 
