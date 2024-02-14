@@ -22,22 +22,20 @@ import SectionTitle from '../components/sectionTitle';
 
 export async function getServerSideProps() {
   const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/posts`);
-  const posts = await res.json();
 
   // In Blog.js's getServerSideProps
 try {
-  const res = await fetch(`YOUR_API_ENDPOINT`);
+  const res = await fetch(`${baseUrl}/api/posts`);
   if (!res.ok) {
     throw new Error(`Failed to fetch, status: ${res.status}`);
-  }g
-  const data = await res.json();
+  }
+  const posts = await res.json();
   return { props: { posts } };
 } catch (error) {
   console.error(error);
   return { props: { error: error.message } };
 }
-}_
+}
 
 
 export default function Home({ posts }) {
