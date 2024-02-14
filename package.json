@@ -47,6 +47,7 @@
     "react-draft-wysiwyg": "^1.15.0",
     "react-hook-form": "^7.43.9",
     "sanitize-html": "^2.11.0",
+    "sharp": "^0.33.2",
     "swr": "^2.2.4"
   },
   "devDependencies": {

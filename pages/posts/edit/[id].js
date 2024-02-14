@@ -8,7 +8,6 @@ import Navbar from '../../../components/navbar';
 import Footer from '../../../components/footer';
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
-import htmlToDraft from 'html-to-draftjs';
 
 // Dynamically import the Editor to avoid SSR issues
 const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Editor), { ssr: false });
@@ -20,20 +19,22 @@ const EditPost = () => {
   const { id } = router.query;
 
   useEffect(() => {
-    if (id) {
-      fetch(`/api/posts/${id}`)
-        .then(res => res.json())
-        .then(data => {
-          setTitle(data.title);
-          const contentBlock = htmlToDraft(data.content);
-          if (contentBlock) {
-            const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-            const editorState = EditorState.createWithContent(contentState);
-            setContent(editorState);
-          }
-        });
+    if (id && typeof window !== 'undefined') {
+      // Dynamically import html-to-draftjs only on the client side
+      import('html-to-draftjs').then(htmlToDraft => {
+        fetch(`/api/posts/${id}`)
+          .then(res => res.json())
+          .then(data => {
+            setTitle(data.title);
+            const blocksFromHtml = htmlToDraft.default(data.content);
+            const { contentBlocks, entityMap } = blocksFromHtml;
+            const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
+            setContent(EditorState.createWithContent(contentState));
+          });
+      });
     }
   }, [id]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
