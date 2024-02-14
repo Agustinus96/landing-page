@@ -22,7 +22,7 @@ import SectionTitle from '../components/sectionTitle';
 
 export async function getServerSideProps() {
   const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
-  const res = await fetch(`/api/posts`);
+  const res = await fetch(`${baseUrl}/api/posts`);
   const posts = await res.json();
 
   return { props: { posts } };
