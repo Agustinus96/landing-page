@@ -25,8 +25,22 @@ export async function getServerSideProps() {
   const res = await fetch(`${baseUrl}/api/posts`);
   const posts = await res.json();
 
-  return { props: { posts } };
+  // In Blog.js's getServerSideProps
+try {
+  const res = await fetch(`YOUR_API_ENDPOINT`);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch, status: ${res.status}`);
+  }
+  const data = await res.json();
+  return { props: { data } };
+} catch (error) {
+  console.error(error);
+  return { props: { error: error.message } };
 }
+
+
+  return { props: { posts } };
+}_
 
 
 export default function Home({ posts }) {
