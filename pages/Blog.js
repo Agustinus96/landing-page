@@ -21,8 +21,7 @@ import SectionTitle from '../components/sectionTitle';
 // import styles from '../styles/Home.module.css';
 
 export async function getServerSideProps() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
-
+  const baseUrl = process.env.URL
   // In Blog.js's getServerSideProps
 try {
   const res = await fetch(`${baseUrl}/api/posts`);
@@ -73,3 +72,4 @@ export default function Home({ posts }) {
   );
 }
 
+// process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
