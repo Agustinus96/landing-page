@@ -4,4 +4,6 @@ module.exports = {
     defaultLocale: "en",
   },
   output: "standalone",
+  env: {
+  }
 };

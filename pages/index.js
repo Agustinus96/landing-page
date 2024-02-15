@@ -11,6 +11,7 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Link from "next/link";
+import ChatbotUI from "../components/ChatbotUI";
 
 const Home = () => {
   return (
@@ -60,6 +61,7 @@ const Home = () => {
           </Link>
         </div>
       {/* <Cta /> */}
+      <ChatbotUI />
       <Footer />
       <PopupWidget />
     </>
