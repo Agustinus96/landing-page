@@ -4,9 +4,10 @@ import { useState } from 'react';
 const ChatbotUI = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const baseUrl= process.env.URL;
 
   const fetchChatGPTResponse = async (message) => {
-    const response = await fetch('http://localhost:3000/api/chat', {
+    const response = await fetch(`${baseUrl}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
