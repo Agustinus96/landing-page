@@ -14,7 +14,7 @@ const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Edito
 
 const EditPost = () => {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
   const router = useRouter();
   const { id } = router.query;
 
@@ -29,7 +29,7 @@ const EditPost = () => {
             const blocksFromHtml = htmlToDraft.default(data.content);
             const { contentBlocks, entityMap } = blocksFromHtml;
             const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
-            setContent(EditorState.createWithContent(contentState));
+            setEditorState(EditorState.createWithContent(contentState));
           });
       });
     }
@@ -38,22 +38,22 @@ const EditPost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const rawContentState = convertToRaw(content.getCurrentContent());
-    const htmlContent = draftToHtml(rawContentState);
+    const rawContentState = convertToRaw(editorState.getCurrentContent());
+    const content = draftToHtml(rawContentState);
 
     const res = await fetch(`/api/posts/${id}`, {
       method: 'PUT', // Assuming you have a PUT method in your API for updates
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ title, content: htmlContent }),
+      body: JSON.stringify({ "_id": id, title, content }),
     
     });
 
 
     if (res.ok) {
       // Redirect to the updated post's page or to another page of your choice
-      console.log(htmlContent);
+      console.log(content);
       console.log(id)
       router.push(`/posts/${id}`);
     } else {
@@ -69,8 +69,8 @@ const EditPost = () => {
       <Navbar />
       <form onSubmit={handleSubmit}>
         <Editor
-          editorState={content}
-          onEditorStateChange={setContent}
+          editorState={editorState}
+          onEditorStateChange={setEditorState}
           wrapperClassName="wrapper-class"
           editorClassName="editor-class"
           toolbarClassName="toolbar-class"

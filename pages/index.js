@@ -2,7 +2,7 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
-import { benefitOne, benefitTwo } from "../components/data";
+import { benefitOne,benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
@@ -11,9 +11,10 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Link from "next/link";
-import ChatbotUI from "../components/ChatbotUI";
+import PopupChat from "../components/popupChat";
 
 const Home = () => {
+
   return (
     <>
       <Head>
@@ -61,9 +62,8 @@ const Home = () => {
           </Link>
         </div>
       {/* <Cta /> */}
-      <ChatbotUI />
       <Footer />
-      <PopupWidget />
+      <PopupChat />
     </>
   );
 }

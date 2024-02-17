@@ -31,11 +31,13 @@ const ChatbotUI = () => {
   };
 
   return (
-    <div className="text-black fixed bottom-0 right-0 m-4 p-4 bg-white shadow-lg rounded-lg max-w-sm w-full">
-      <div className="overflow-y-scroll h-64">
+    <div className="text-black flex flex-col justify-inbetween right-0 m-4 p-4 h-full">
+      <div className="overflow-y-scroll w-full flex-wrap m-auto p-auto shrink">
         {messages.map((message) => (
-          <div key={message.id} className={`p-2 ${message.sender === 'user' ? 'text-right' : 'text-left'}`}>
+          <div className={`grid ${message.sender === 'user' ? 'justify-items-end' : 'justify-items-start'}`}>
+          <div key={message.id} className={`px-4 py-2 mb-2 ${message.sender === 'user' ? 'max-w-[85%] text-right bg-emerald-200 justify-items-end rounded-xl' : 'max-w-[85%] text-left bg-emerald-400 basis-4/5 place-content-start rounded-xl'}`}>
             {message.text}
+          </div>
           </div>
         ))}
       </div>
@@ -44,7 +46,7 @@ const ChatbotUI = () => {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && sendMessage(inputValue)}
-        className="w-full p-2 border border-gray-300 rounded"
+        className="text-gray-300 w-full p-2 border border-gray-300 rounded h-12"
         placeholder="Type a message..."
       />
     </div>

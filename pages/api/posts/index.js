@@ -86,9 +86,9 @@ export default async function handler(req, res) {
         allowedAttributes: false,
         allowedIframeHostnames: ['www.youtube.com'],
       });
-      const result = await db.collection('posts').updateOne(
-        { _id: new ObjectId(id) },
-        { $set: { title, content: sanitizedContent } }
+      const result = await db.collection("posts").findOneAndReplace(
+        { "_id" : id },
+        { title, content }
       );
       if (result.matchedCount === 0) {
         return res.status(404).json({ message: 'Post not found' });

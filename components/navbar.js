@@ -1,15 +1,21 @@
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import translations from '../components/translation/navbarTranslation'
 
 const Navbar = () => {
+  const { locale } = useRouter();
+  const currentTranslation = translations[locale];
+
   const navigation = [
-    "Services",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
+    currentTranslation.Services,
+    currentTranslation.Features,
+    currentTranslation.Pricing,
+    currentTranslation.Company,
+    currentTranslation.Blog,
   ];
 
   return (
@@ -20,7 +26,7 @@ const Navbar = () => {
           {({ open }) => (
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-                <Link href="/">
+                <Link href="/" locale={locale}>
                   <span className="flex items-center space-x-2 text-2xl font-medium text-emerald-500 dark:text-gray-100">
                     <span>
                       <Image

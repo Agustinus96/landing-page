@@ -56,7 +56,7 @@ import Footer from '../../components/footer';
 const Post = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [post, setPost] = useState(null);
+  const [post, setPost] = useState("");
 
   useEffect(() => {
     if (id) {

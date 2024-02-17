@@ -118,32 +118,47 @@
 
 // // Assuming this page is for creating a new post or editing an existing one.
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useSession, signIn } from 'next-auth/react';
 import dynamic from 'next/dynamic';
 import { EditorState, convertToRaw } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import SectionTitle from '../components/sectionTitle';
 import Head from 'next/head';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import PopupWidget from '../components/popupWidget';
-import { useRouter } from 'next/router';
+import Navbar from '../components/navbar'; // Adjust the import path as necessary
+import SectionTitle from '../components/sectionTitle'; // Adjust the import path as necessary
+import Footer from '../components/footer'; // Adjust the import path as necessary
+import PopupWidget from '../components/popupWidget'; // Adjust the import path as necessary
+import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-// Dynamically import the Editor component with SSR disabled
 const Editor = dynamic(
   () => import('react-draft-wysiwyg').then((mod) => mod.Editor),
   { ssr: false }
 );
 
 export default function EditorPage() {
+  const { data: session, status } = useSession();
   const [title, setTitle] = useState("");
-  const [introduction, setIntroduction] = useState("");
   const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
   const [isFocus, setIsFocus] = useState(false);
   const router = useRouter();
 
-  const customStyle = isFocus ? {height: "40vh", outline: "2px solid #3b82f6", borderRadius: "0.5rem"} : {height: "40vh", borderRadius: "0.5rem"}
+  if (status === "loading") {
+    return <p>Loading...</p>; // Or any loading state you prefer
+  }
+
+  if (!session) {
+    // Redirect or show a login prompt if not authenticated
+    // This could be a call to signIn(), or a custom message with a signIn button
+    return (
+      <div>
+        <p>You must be logged in to view this page.</p>
+        <button onClick={router.push("/login")}>Log in</button>
+      </div>
+    );
+  }
+
+  const customStyle = isFocus ? {height: "40vh", outline: "2px solid #3b82f6", borderRadius: "0.5rem"} : {height: "40vh", borderRadius: "0.5rem"};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -154,6 +169,7 @@ export default function EditorPage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        // You might want to include the session token in your request for server-side verification
       },
       body: JSON.stringify({ title, content }),
     });
@@ -161,7 +177,7 @@ export default function EditorPage() {
     if (res.ok) {
       router.push('/');
     } else {
-      // Handle errors or show a message to the user
+        router.push('/login')
     }
   };
 
@@ -198,7 +214,7 @@ export default function EditorPage() {
               onEditorStateChange={setEditorState}
               onFocus={() => setIsFocus(true)}
               onBlur={() => setIsFocus(false)}
-              wrapperClassName="demo-wrapper"
+              wrapperClassName={"demo-wrapper"}
               editorClassName="w-[720px] mb-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               editorStyle={customStyle}
               toolbar={{

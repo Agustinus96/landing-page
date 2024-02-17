@@ -10,6 +10,7 @@ import {
 import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
 
+
 const benefitOne = {
   title: "Personalized hiring experience",
   desc: "High customability for each job hiring process. We provide a medium where employer and candidates can get to know each other better from the get-go, increasing the hiring efficiency in this tight market.",
@@ -30,6 +31,7 @@ const benefitOne = {
       desc: "Possitive hiring experience decrease employer turnover rate.",
       icon: <CursorArrowRaysIcon />,
     },
+    
   ],
 };
 
