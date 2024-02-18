@@ -5,6 +5,7 @@ import bcrypt from 'bcryptjs';
 import clientPromise from '../../../lib/mongodb'; // Adjust the path as necessary
 
 export default NextAuth({
+    secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: 'jwt',
   },
@@ -12,7 +13,7 @@ export default NextAuth({
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
-        id: { label: "Admin ID", type: "text", placeholder: "admin" },
+        id: { type: "text", placeholder: "Admin ID" },
         password: {  label: "Password", type: "password" }
       },
       async authorize(credentials) {
