@@ -1,0 +1,46 @@
+{
+    "productOne": {
+        "title": "採用プラットフォーム",
+        "desc": "全員向けの一貫した採用サービス。企業、人材紹介会社、個人に価値を提供します。",
+        "image": "/img/platform.png",
+        "bullets": [
+            {
+                "title": "雇用主ブランドの構築",
+                "desc": "初めから企業の魅力を築きます。",
+                "icon": "SparklesIcon"
+            },
+            {
+                "title": "マッチング率向上",
+                "desc": "魅力的なプロセスで不一致を減らす。",
+                "icon": "ChartBarSquareIcon"
+            },
+            {
+                "title": "雇用維持",
+                "desc": "良好な採用体験が離職率を下げます。",
+                "icon": "UserGroupIcon"
+            }
+        ]
+    },
+    "productTwo": {
+        "title": "合理化されたプラットフォーム",
+        "desc": "新技術で採用プロセスをスムーズにし、問題を解決します。",
+        "image": "/img/hiring-management.png",
+        "bullets": [
+            {
+                "title": "AI統合",
+                "desc": "最新AIで職務記述やFAQを生成。",
+                "icon": "DevicePhoneMobileIcon"
+            },
+            {
+                "title": "ワークスペース統合",
+                "desc": "Google MeetやTeamsなどの統合。",
+                "icon": "AdjustmentsHorizontalIcon"
+            },
+            {
+                "title": "リアルタイムフィードバック",
+                "desc": "採用体験についての実際のフィードバックを提供。",
+                "icon": "SunIcon"
+            }
+        ]
+    }
+}

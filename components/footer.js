@@ -2,16 +2,27 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
+import translations from "../components/translation/navbarTranslation";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
+  const { locale, pathname, asPath, query } = router;
+  const currentTranslation = translations[locale];
+
   const navigation = [
-    "Services",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
+    { path: "/Services", label: currentTranslation.Services },
+    { path: "/Features", label: currentTranslation.Features },
+    { path: "/Pricing", label: currentTranslation.Pricing },
+    { path: "/Company", label: currentTranslation.Company },
+    { path: "/Blog", label: currentTranslation.Blog },
   ];
-  const legal = ["Terms", "Privacy", "Legal"];
+
+  const legal = [   
+  { path: "/Terms", label: currentTranslation.Terms },
+  { path: "/Privacy", label: currentTranslation.Privacy },
+  { path: "/Legal", label: currentTranslation.Legal },
+];
   return (
     <div className="relative">
       <Container>
@@ -55,8 +66,8 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
-                <Link key={index} href={"/" + `${item}`} className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-500 focus:text-emerald-500 focus:bg-emerald-100 focus:outline-none dark:focus:bg-trueGray-700">                 
-                    {item}
+                <Link key={index} href={item.path} className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-500 focus:text-emerald-500 focus:bg-emerald-100 focus:outline-none dark:focus:bg-trueGray-700">                 
+                    {item.label}
                 </Link>
               ))}
             </div>
@@ -64,14 +75,14 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-500 focus:text-emerald-500 focus:bg-emerald-100 focus:outline-none dark:focus:bg-trueGray-700">      
-                    {item}
+                <Link key={index} href={item.path} className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-500 focus:text-emerald-500 focus:bg-emerald-100 focus:outline-none dark:focus:bg-trueGray-700">      
+                    {item.label}
                 </Link>
               ))}
             </div>
           </div>
           <div className="">
-            <div>Follow us</div>
+            <div>{currentTranslation.Follow}</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               {/* <a
                 href="/"
@@ -106,7 +117,7 @@ export default function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
+          Copyright © {new Date().getFullYear()}.
           <a
             href="https://web3templates.com/"
             target="_blank"

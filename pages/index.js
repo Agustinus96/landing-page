@@ -2,7 +2,6 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
-import { benefitOne,benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
@@ -12,8 +11,11 @@ import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Link from "next/link";
 import PopupChat from "../components/popupChat";
+import { useBenefitsData } from "../components/data";
 
 const Home = () => {
+  const data = useBenefitsData();
+  console.log(data);
 
   return (
     <>
@@ -35,8 +37,8 @@ const Home = () => {
         quality experience for both employers and candidates, enhancing efficiency 
         and cultural alignment for more effective, satisfying recruitment outcomes.
       </SectionTitle>
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
+      <Benefits data={data.benefitOne} />
+      <Benefits imgPos="right" data={data.benefitTwo} />
       <SectionTitle
         pretitle="Watch a video"
         title="See our platform at work">

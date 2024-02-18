@@ -10,51 +10,13 @@ import {
 import featureOneImg from "../../public/img/hiring-experience.jpg";
 import featureTwoImg from "../../public/img/hiring-management.png";
 
-const featureOne = {
-  title: "Personalized hiring experience",
-  desc: "High customability for each job hiring process. We provide a medium where employer and candidates can get to know each other better from the get-go, increasing the hiring efficiency in this tight market.",
-  image: featureOneImg,
-  bullets: [
-    {
-      title: "Build a brand as an employer",
-      desc: "Building company brand as employer from the get-go.",
-      icon: <FaceSmileIcon />,
-    },
-    {
-      title: "Improve match rate",
-      desc: "More engaging process means less mis-matched hire.",
-      icon: <ChartBarSquareIcon />,
-    },
-    {
-      title: "Drive employer retention",
-      desc: "Possitive hiring experience decrease employer turnover rate.",
-      icon: <CursorArrowRaysIcon />,
-    },
-  ],
-};
+import { useRouter } from 'next/router';
 
-const featureTwo = {
-  title: "Streamlined platform",
-  desc: "Integrating new technologies to further streamline the hiring process and reduce the cumbersome process that plagued the hiring scene in Japan.",
-  image: featureTwoImg,
-  bullets: [
-    {
-      title: "AI-Integration",
-      desc: "Generate job description, messages and FAQ using the lastest AI technology.",
-      icon: <DevicePhoneMobileIcon />,
-    },
-    {
-      title: "Major workspace integration",
-      desc: "Integration of major web-meeting platform such as Google Meet and Teams.",
-      icon: <AdjustmentsHorizontalIcon />,
-    },
-    {
-      title: "Real-time feedback from candidates",
-      desc: "Gloxus allows candidates to give a real-feedback on their hiring experience. ",
-      icon: <SunIcon />,
-    },
-  ],
-};
+export function useFeaturesData() {
+  const { locale } = useRouter();
+  const translations = require(`../../public/locales/${locale}/features.json`);
+
+  return translations;
+}
 
 
-export {featureOne, featureTwo};

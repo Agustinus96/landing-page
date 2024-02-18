@@ -1,9 +1,25 @@
 import Image from "next/image";
 import React from "react";
 import Container from "../container";
+import {
+  FaceSmileIcon,
+  ChartBarSquareIcon,
+  CursorArrowRaysIcon,
+  DevicePhoneMobileIcon,
+  AdjustmentsHorizontalIcon,
+  SunIcon,
+} from "@heroicons/react/24/solid";
 
 const Products = (props) => {
   const { data } = props;
+  const iconMapping = {
+    FaceSmileIcon: FaceSmileIcon,
+    ChartBarSquareIcon: ChartBarSquareIcon,
+    CursorArrowRaysIcon: CursorArrowRaysIcon,
+    DevicePhoneMobileIcon: DevicePhoneMobileIcon,
+    AdjustmentsHorizontalIcon: AdjustmentsHorizontalIcon,
+    SunIcon: SunIcon,
+  };
   return (
     <>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap mx-auto">
@@ -18,8 +34,6 @@ const Products = (props) => {
               height="480"
               alt="Features"
               className={"object-cover"}
-              placeholder="blur"
-              blurDataURL={data.image.src}
             />
           </div>
         </div>
@@ -41,7 +55,9 @@ const Products = (props) => {
 
             <div className="w-full mt-5">
               {data.bullets.map((item, index) => (
-                <Product key={index} title={item.title} icon={item.icon}>
+                <Product key={index} title={item.title} icon={iconMapping[item.icon] ? React.createElement(iconMapping[item.icon], {
+                  style: { transform: 'scale(0.7)' }
+                }) : undefined}>
                   {item.desc}
                 </Product>
               ))}
@@ -53,21 +69,19 @@ const Products = (props) => {
   );
 };
 
-function Product(props) {
+function Product({ title, children, icon }) {
   return (
     <>
       <div className="flex items-start mt-8 space-x-3">
         <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-teal-500 rounded-md w-11 h-11 ">
-          {React.cloneElement(props.icon, {
-            className: "w-7 h-7 text-indigo-50",
-          })}
+          {icon}
         </div>
         <div>
           <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
-            {props.title}
+            {title}
           </h4>
           <p className="mt-1 text-gray-500 dark:text-gray-400">
-            {props.children}
+            {children}
           </p>
         </div>
       </div>

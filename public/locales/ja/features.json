@@ -1,0 +1,48 @@
+{
+    "featureOne": {
+      "title": "パーソナライズされた採用体験",
+      "desc": "各採用プロセスに高いカスタマイズ性を提供します。採用者と候補者が初めからお互いをより深く理解できるようにし、この厳しい市場での採用効率を高めます。",
+      "image": "/img/hiring-experience.jpg",
+      "bullets": [
+        {
+          "title": "雇用主としてのブランド構築",
+          "desc": "初めから雇用主としての企業ブランドを構築。",
+          "icon": "FaceSmileIcon"
+        },
+        {
+          "title": "マッチ率の向上",
+          "desc": "より魅力的なプロセスでミスマッチの採用を減らします。",
+          "icon": "ChartBarSquareIcon"
+        },
+        {
+          "title": "雇用者定着の促進",
+          "desc": "ポジティブな採用体験が雇用者の離職率を下げます。",
+          "icon": "CursorArrowRaysIcon"
+        }
+      ]
+    },
+  
+    "featureTwo": {
+      "title": "合理化されたプラットフォーム",
+      "desc": "新しい技術を統合して採用プロセスをさらに合理化し、日本の採用シーンにおける煩雑なプロセスを軽減します。",
+      "image": "/img/hiring-management.png",
+      "bullets": [
+        {
+          "title": "AI統合",
+          "desc": "最新のAI技術を使用して、仕事の説明、メッセージ、FAQを生成。",
+          "icon": "DevicePhoneMobileIcon"
+        },
+        {
+          "title": "主要なワークスペース統合",
+          "desc": "Google MeetやTeamsなどの主要なWeb会議プラットフォームの統合。",
+          "icon": "AdjustmentsHorizontalIcon"
+        },
+        {
+          "title": "候補者からのリアルタイムフィードバック",
+          "desc": "Gloxusを通じて、候補者が採用体験に関する実際のフィードバックを提供できます。",
+          "icon": "SunIcon"
+        }
+      ]
+    }
+  }
+  

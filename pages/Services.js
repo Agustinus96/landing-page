@@ -5,9 +5,23 @@ import PopupWidget from "../components/popupWidget";
 import Head from "next/head";
 import HeroServices from "../components/services/hero-services";
 import Products from "../components/services/product";
-import { productOne } from "../components/services/product-data";
+import { useServicesData } from "../components/services/product-data"
+// In your page file
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])), // Ensure 'common' is your default namespace
+    },
+  };
+}
+
+
 
 const heroService = () => {
+  const data = useServicesData();
+  console.log(data);
   return (
     <> 
     <Navbar />
@@ -20,7 +34,7 @@ const heroService = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroServices />
-      <Products data={productOne}/>
+      <Products data={data.productOne}/>
     <Footer />
     <PopupWidget />
     </>

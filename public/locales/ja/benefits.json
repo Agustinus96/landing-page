@@ -1,0 +1,47 @@
+{
+    "benefitOne": {
+      "title": "パーソナライズされた採用体験",
+      "desc": "各職種の採用プロセスに高いカスタマイズ性を提供します。採用者と候補者が最初からお互いをより深く知ることができる場を提供し、この厳しい市場での採用効率を高めます。",
+      "image": "/img/benefit-one.png",
+      "bullets": [
+        {
+          "title": "雇用主としてのブランド構築",
+          "desc": "最初から雇用主としての会社のブランドを構築します。",
+          "iconName": "FaceSmileIcon"
+        },
+        {
+          "title": "マッチ率の向上",
+          "desc": "より魅力的なプロセスは、ミスマッチの採用を減らします。",
+          "iconName": "ChartBarSquareIcon"
+        },
+        {
+          "title": "雇用者の定着を促進",
+          "desc": "ポジティブな採用体験は雇用者の離職率を減少させます。",
+          "iconName": "CursorArrowRaysIcon"
+        }
+      ]
+    },
+    "benefitTwo": {
+      "title": "合理化されたプラットフォーム",
+      "desc": "新しい技術を統合して、採用プロセスをさらに合理化し、日本の採用シーンを悩ませていた煩雑なプロセスを減らします。",
+      "image": "/img/benefit-two.png",
+      "bullets": [
+        {
+          "title": "AIの統合",
+          "desc": "最新のAI技術を使用して、仕事の説明、メッセージ、FAQを生成します。",
+          "iconName": "DevicePhoneMobileIcon"
+        },
+        {
+          "title": "主要なワークスペースの統合",
+          "desc": "Google MeetやTeamsなどの主要なWeb会議プラットフォームの統合。",
+          "iconName": "AdjustmentsHorizontalIcon"
+        },
+        {
+          "title": "候補者からのリアルタイムのフィードバック",
+          "desc": "Gloxusは、候補者が採用体験に関するリアルなフィードバックを提供できるようにします。",
+          "iconName": "SunIcon"
+        }
+      ]
+    }
+  }
+  
