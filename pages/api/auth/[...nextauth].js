@@ -16,7 +16,8 @@ export default NextAuth({
         password: {  label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        const client = await clientPromise;
+       try
+        {const client = await clientPromise;
         const db = client.db('blogDB');
 
         const user = await db.collection('admin').findOne({ id: credentials.id });
@@ -27,7 +28,10 @@ export default NextAuth({
         } else {
           return null;
         }
-      },
+      } catch (error) {
+        console.error("Authorization failed", error);
+        throw new Error("Internal server error");
+      }},
     }),
   ],
   pages: {

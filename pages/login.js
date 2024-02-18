@@ -47,7 +47,7 @@ function LoginPage() {
       <form
        className="flex flex-col py-5"
        onSubmit={handleSubmit}>
-        <label className="mb-2 px-2">Username :</label>
+        <label className="mb-2 px-2">Admin ID</label>
         <input
           className="mb-5 px-2 py-1 rounded-md focus:border-[2px] focus:border-emerald-500"
           type="text"
