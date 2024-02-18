@@ -1,7 +1,7 @@
 // pages/api/auth/[...nextauth].js
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import clientPromise from '../../../lib/mongodb'; // Adjust the path as necessary
 
 export default NextAuth({
