@@ -12,10 +12,28 @@ import PopupWidget from "../components/popupWidget";
 import Link from "next/link";
 import PopupChat from "../components/popupChat";
 import { useBenefitsData } from "../components/data";
+import { useRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])), // Ensure 'common' is your default namespace
+    },
+  };
+}
 
 const Home = () => {
   const data = useBenefitsData();
-  console.log(data);
+  const router = useRouter();
+
+  const { t } = useTranslation("common");
+
+  const gloxusBenefits = t("GloxusBenefits", { returnObjects: true });
+  const video = t("Video", { returnObjects: true });
+  const testimonial = t("Testimonials", { returnObjects: true });
+  const questions = t("FAQ", { returnObjects: true });
 
   return (
     <>
@@ -31,43 +49,41 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Gloxus Benefits"
-        title=" Why you should use our platform">
-        Gloxus transforms hiring in Japan, offering a personalized, 
-        quality experience for both employers and candidates, enhancing efficiency 
-        and cultural alignment for more effective, satisfying recruitment outcomes.
+        pretitle={gloxusBenefits.Pretitle}
+        title={gloxusBenefits.SubTitle}
+      >
+        {gloxusBenefits.Content}
       </SectionTitle>
       <Benefits data={data.benefitOne} />
       <Benefits imgPos="right" data={data.benefitTwo} />
-      <SectionTitle
-        pretitle="Watch a video"
-        title="See our platform at work">
-          Make a video. 
+      <SectionTitle pretitle={video.Pretitle} title={video.SubTitle}>
+        {video.Content}
       </SectionTitle>
       <Video />
       <SectionTitle
-        pretitle="Future Testimonials"
-        title="Releasing a Closed Trial">
-        We are looking for partners to participate in our limited MVP release. 
-        Your feedback is very important to us to further develop this platform 
-        and ensure that our product fits your needs.
+        pretitle={testimonial.Pretitle}
+        title={testimonial.SubTitle}
+      >
+        {testimonial.Content}
       </SectionTitle>
       <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+      <SectionTitle pretitle={questions.Pretitle} title={questions.SubTitle}>
+        {questions.Content}
       </SectionTitle>
       <Faq />
       <div className="flex w-full items-center justify-center text-center">
-          <Link href="/faq" className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5">
-              show more
-          </Link>
-        </div>
+        <Link
+          href="/faq"
+          className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5"
+        >
+        {t("more")}
+        </Link>
+      </div>
       {/* <Cta /> */}
       <Footer />
       <PopupChat />
     </>
   );
-}
+};
 
 export default Home;

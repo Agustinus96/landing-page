@@ -21,7 +21,6 @@ export async function getStaticProps({ locale }) {
 
 const heroService = () => {
   const data = useServicesData();
-  console.log(data);
   return (
     <> 
     <Navbar />

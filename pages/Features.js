@@ -19,7 +19,6 @@ export async function getStaticProps({ locale }) {
 const feature = () => {
   const { t } = useTranslation('common');
   const data = useFeaturesData();
-  console.log(data);
   return (
     <> 
     <Navbar />

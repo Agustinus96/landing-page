@@ -1,8 +1,30 @@
 {
-    "heroTitle": "Hiring consulting",
-    "heroDescription": "Hiring the right candidate for a job is very difficult, especially in the Japanese market culture. What even more difficult is keeping great talents from leaving the company early. We are here to assist you with through the negotiation of employment contracts, visa application and many more.",
-    "contactUs": "Contact us",
-    "featureTitle": "Our Services",
-    "featureHeading": "We believe in the importance of both streamlined system and highly engaging possitive hiring experience."
+  "Section": "home section",
+  "heroTitle": "Hiring consulting",
+  "heroDescription": "Hiring the right candidate for a job is very difficult, especially in the Japanese market culture. What even more difficult is keeping great talents from leaving the company early. We are here to assist you with through the negotiation of employment contracts, visa application and many more.",
+  "contactUs": "Contact us",
+  "featureTitle": "Our Services",
+  "featureHeading": "We believe in the importance of both streamlined system and highly engaging possitive hiring experience.",
+  "more": "show more",
+
+  "GloxusBenefits": {
+    "Pretitle": "Gloxus Benefits",
+    "SubTitle": "Why you should use our platform",
+    "Content": "Gloxus transforms hiring in Japan, offering a personalized, quality experience for both employers and candidates, enhancing efficiency and cultural alignment for more effective, satisfying recruitment outcomes."
+  },
+  "Video": {
+    "Pretitle": "Watch a video",
+    "SubTitle": "See our platform at work",
+    "Content": "Make a video"
+  },
+  "Testimonials": {
+    "Pretitle": "Future Testimonials",
+    "SubTitle": "Releasing a Closed Trial",
+    "Content": " We are looking for partners to participate in our limited MVP release. Your feedback is very important to us to further develop this platform and ensure that our product fits your needs."
+  },
+  "FAQ": {
+    "Pretitle": "FAQ",
+    "SubTitle": "Frequently Asked Questions",
+    "Content": "Answer your customers possible questions here, it will increase the conversion rate as well as support or chat requests."
   }
-  
+}

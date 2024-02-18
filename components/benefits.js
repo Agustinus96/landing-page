@@ -20,7 +20,6 @@ const Benefits = (props) => {
     AdjustmentsHorizontalIcon: AdjustmentsHorizontalIcon,
     SunIcon: SunIcon,
   };
-  console.log(data);
   return (
     <>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap mx-auto">
