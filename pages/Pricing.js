@@ -7,6 +7,16 @@ import SectionTitle from '../components/sectionTitle'
 import Tables from '../components/pricing/table'
 import PopupWidget from '../components/popupWidget'
 import { priceOne, priceTwo } from "../components/pricing/pricing-data";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}
+
 
 const Pricing = () => {
     return (

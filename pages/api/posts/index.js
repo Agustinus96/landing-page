@@ -1,105 +1,69 @@
-// import clientPromise from '../../../lib/mongodb';
-
-// export default async function handler(req, res) {
-//   const client = await clientPromise;
-//   const db = client.db("blogDB");
-
-//   const posts = await db.collection("posts").find({}).toArray();
-//   res.json(posts);
-// }
-
-// import clientPromise from '../../../lib/mongodb';
-
-// export default async function handler(req, res) {
-//   const client = await clientPromise;
-//   const db = client.db("blogDB");
-
-//   if (req.method === 'GET') {
-//     // Fetch and return the posts for a GET request
-//     const posts = await db.collection("posts").find({}).toArray();
-//     res.json(posts);
-//   } else if (req.method === 'POST') {
-//     // Add a new post for a POST request
-//     try {
-//       // Extract post data from the request body
-//       const postData = req.body;
-      
-//       // Simple validation
-//       if (!postData.title || !postData.introduction || !postData.subtitle || !postData.content) {
-//         return res.status(400).json({ message: 'Title and content are required' });
-//       }
-
-//       // Insert the new post into the database
-//       const result = await db.collection("posts").insertOne(postData);
-
-//       // Respond with the created post
-//       res.status(201).json(result.ops[0]);
-//     } catch (error) {
-//       // Handle any errors that occur during the insert
-//       res.status(500).json({ message: 'Failed to add the post', error: error.message });
-//     }
-//   } else {
-//     // Respond with method not allowed if not GET or POST
-//     res.setHeader('Allow', ['GET', 'POST']);
-//     res.status(405).end(`Method ${req.method} Not Allowed`);
-//   }
-// }
-
-
 import clientPromise from '../../../lib/mongodb';
 import sanitizeHtml from 'sanitize-html';
-import { ObjectId } from 'mongodb';
+import { v4 as uuidv4 } from 'uuid';
 
 export default async function handler(req, res) {
   const client = await clientPromise;
   const db = client.db("blogDB");
-  const { id } = req.query; // Extract the document ID from the query parameters
+  const postsCollection = db.collection("posts");
 
   if (req.method === 'GET') {
-    const posts = await db.collection("posts").find({}).toArray();
-    res.json(posts);
-  } else if (req.method === 'POST') {
     try {
-      const { title, content } = req.body;
-      if (!title || !content) {
-        return res.status(400).json({ message: 'All fields are required' });
-      }
-      const sanitizedContent = sanitizeHtml(content, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'img' ]),
-        allowedAttributes: false,
-        allowedIframeHostnames: ['www.youtube.com'],
-      });
-      const postData = {
-        title,
-        content: sanitizedContent,
-      };
-      const result = await db.collection("posts").insertOne(postData);
-      res.status(201).json(result.ops[0]);
+      const posts = await postsCollection.find({}).toArray();
+      res.json(posts);
     } catch (error) {
-      res.status(500).json({ message: 'Failed to add the post', error: error.message });
+      res.status(500).json({ message: 'Failed to fetch posts', error: error.message });
     }
-  } else if (req.method === 'PUT') {
+  } else if (req.method === 'POST') {
+    const { title, content } = req.body;
+
+    // Generate a unique identifier for the new post
+    const customId = uuidv4();
+
     try {
+      const postData = { customId, title, content }; // Include customId in the post data
+      const result = await postsCollection.insertOne(postData);
+      return res.status(201).json({ message: 'Post created successfully', id: customId });
+    } catch (error) {
+      return res.status(500).json({ message: 'Failed to create the post', error: error.message });
+    }
+} else if (req.method === 'PUT') {
+    console.log("PUT request received", req.query, req.body);
+    try {
+      const { customId } = req.query; // Use customId to identify the post
       const { title, content } = req.body;
+      console.log(`Updating post with customId: ${customId}`);
+
+      // Validate input
+      if (!title || !content) {
+        return res.status(400).json({ message: 'Title and content are required' });
+      }
+
+      // Sanitize content
       const sanitizedContent = sanitizeHtml(content, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'img' ]),
+        allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
         allowedAttributes: false,
         allowedIframeHostnames: ['www.youtube.com'],
       });
-      const result = await db.collection("posts").findOneAndReplace(
-        { "_id" : id },
-        { title, content }
+
+      // Update the post by customId
+      const result = await postsCollection.updateOne(
+        { customId }, // Query document by customId
+        { $set: { title, content: sanitizedContent } } // Update title and content
       );
+
+      // Check if the document was found and updated
       if (result.matchedCount === 0) {
         return res.status(404).json({ message: 'Post not found' });
       }
-      res.json({ message: 'Post updated successfully' });
+      // Respond with success message
+      res.json({ message: 'Post updated successfully', customId });
     } catch (error) {
       res.status(500).json({ message: 'Failed to update the post', error: error.message });
     }
   } else {
-    res.setHeader('Allow', ['GET', 'POST', 'PUT']); // Ensure to include 'PUT' in the 'Allow' header
+    // Handle unsupported HTTP methods
+    res.setHeader('Allow', ['GET', 'POST', 'PUT']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
-

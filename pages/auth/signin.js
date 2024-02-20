@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react'; // Import signIn from next-auth/react
 import Head from 'next/head';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import PopupWidget from '../components/popupWidget';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
+import PopupWidget from '../../components/popupWidget';
 
 function LoginPage() {
   const [id, setId] = useState('');
@@ -22,6 +22,7 @@ function LoginPage() {
 
     // Check if signIn was successful based on the error status
     if (result.error) {
+      console.log(error);
       // Handle error, e.g., show an error message to the user
       alert(result.error); 
     } else {

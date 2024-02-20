@@ -12,6 +12,8 @@ export default async function handler(req, res) {
     // Find the admin user in the database
     const user = await db.collection("admin").findOne({ id });
 
+    console.log(user);
+
     if (!user) {
       return res.status(401).json({ message: 'Authentication failed' });
     }
