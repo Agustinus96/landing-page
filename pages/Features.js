@@ -1,5 +1,5 @@
 import React from "react";
-import Features from "../components/features/features";
+import Features from "../components/features/featuresComp";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import PopupWidget from "../components/popupWidget";

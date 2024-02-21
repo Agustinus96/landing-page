@@ -9,13 +9,22 @@ import PopupWidget from '../components/popupWidget'
 import Company from '../components/company/company'
 import { founder } from '../components/company/teams-data'
 import Teams from '../components/company/teams'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+[]
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])), // Ensure 'common' is your default namespace
+    },
+  };
+}
 
 const Pricing = () => {
     return (
         <> 
         <Navbar />
         <Company />
-        <Teams data={founder}/>
+        {/* <Teams data={founder}/> */}
         <Footer />
         <PopupWidget />
         </>

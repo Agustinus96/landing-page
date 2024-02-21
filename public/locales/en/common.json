@@ -28,5 +28,10 @@
     "Pretitle": "FAQ",
     "SubTitle": "Frequently Asked Questions",
     "Content": "Answer your customers possible questions here, it will increase the conversion rate as well as support or chat requests."
+  },
+  "Company": {
+    "StoryTitle": "Our Story",
+    "StoryContent": "Gloxus sprang from a desire to humanize the hiring process, recognizing that personal connections at the start can boost hiring success and employee loyalty. We saw how company branding, woven into this early stage, deeply influences a candidate's journey. Our mission? To make every hire not just a transaction, but a meaningful start.",
+    "StoryLearn": "Learn more"
   }
 }
