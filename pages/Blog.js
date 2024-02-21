@@ -50,14 +50,18 @@ export default function Home({ posts }) {
       <div className="flex flex-wrap justify-center">
         {posts.map((post) => (
           <div key={post.customId} className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-emerald-500 text-white">
-            <div className="px-6 py-4">
-              <Link className="font-bold text-xl mb-2" href={`/posts/${post.customId}`}>
+            <div className="parent flex flex-col px-6 py-4 sm:h-[30vh] min-h-[300px]">
+              <div className="child flex-1 h-full">
+              <Link className="font-bold text-xl mb-3 grow h-full" href={`/posts/${post.customId}`}>
                 {post.title.length > 24 ? `${post.title.substring(0, 24)}...` : post.title}
               </Link>
-              <div dangerouslySetInnerHTML={{ __html: post.content.substring(0, 250) + '...' }} />
-              <Link className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-4" href={`/posts/${post.customId}`}>
+              <div className="pt-4" dangerouslySetInnerHTML={{ __html: post.content.length > 240 ? post.content.substring(0, 240) + '...' : post.content }} />
+              </div>
+              <div className="flex justify-end">
+              <Link className=" bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-4 justify-end" href={`/posts/${post.customId}`}>
                 Continue reading
               </Link>
+              </div>
             </div>
           </div>
         ))}

@@ -6,8 +6,10 @@ import Footer from '../../components/footer';
 import DOMPurify from 'dompurify';
 import SectionTitle from '../../components/sectionTitle';
 import Content from '../../components/articleBody';
+import { useSession } from 'next-auth/react';
 
 const Post = () => {
+  const { data: session, status } = useSession();
   const router = useRouter();
   const { customId } = router.query;
   const [post, setPost] = useState(null);
@@ -25,7 +27,35 @@ const Post = () => {
     return <div>Loading...</div>;
   }
 
+  DOMPurify.addHook('uponSanitizeElement', (node, data) => {
+    if (data.tagName === 'p') {
+      node.setAttribute('class', 'text-xl pb-2');
+    } else if (data.tagName === "h2") {
+      node.setAttribute('class', 'text-[24px] font-bold border p-2 rounded-xl text-center')
+    } else if (data.tagName === "ol") {
+      node.setAttribute('class', 'list-decimal pl-10')
+    }
+  });
+  
   const sanitizedContent = DOMPurify.sanitize(post.content);
+
+  if (status === "unauthenticated") {
+    return (
+      <>
+      <Head>
+        <title className='text-xl font-bold'>{post.title}</title>
+      </Head>
+      <Navbar />
+      <article className="prose lg:prose-xl m-auto py-12 px-4">
+        <SectionTitle 
+        title={post.title}>
+        </SectionTitle>
+        <div className="text-md tracking-wider dark:text-white text-black max-w-[60%] m-auto" dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
+      </article>
+      <Footer />
+    </>
+    );
+  }
 
   return (
     <>

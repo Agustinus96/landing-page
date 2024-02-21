@@ -1,3 +1,4 @@
+// api/auth/signin.js
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react'; // Import signIn from next-auth/react
@@ -19,7 +20,7 @@ function LoginPage() {
       id,
       password,
     });
-
+    console.log(result);
     // Check if signIn was successful based on the error status
     if (result.error) {
       console.log(error);

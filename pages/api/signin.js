@@ -1,4 +1,4 @@
-// pages/api/login.js
+// pages/api/signin.js
 import clientPromise from '../../lib/mongodb'; // Adjust the path as necessary
 import bcrypt from 'bcrypt';
 

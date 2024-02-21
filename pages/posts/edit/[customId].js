@@ -11,12 +11,17 @@ import draftToHtml from 'draftjs-to-html';
 
 const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Editor), { ssr: false });
 
+
+
 const EditPost = () => {
   const [title, setTitle] = useState('');
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [isFocus, setIsFocus] = useState(false);
   const router = useRouter();
   const { customId } = router.query;
   const { data: session, status } = useSession(); // Use the useSession hook
+  
+  const customStyle = isFocus ? {height: "40vh", outline: "2px solid #3b82f6", borderRadius: "0.5rem"} : {height: "40vh", borderRadius: "0.5rem"};
 
   useEffect(() => {
     // Redirect if not authenticated
@@ -87,16 +92,40 @@ const EditPost = () => {
         <title>Edit Post</title>
       </Head>
       <Navbar />
+      <div className="flex flex-wrap m-auto justify-center">
       <form onSubmit={handleSubmit}>
-        <Editor
-          editorState={editorState}
-          onEditorStateChange={setEditorState}
-          wrapperClassName="wrapper-class"
-          editorClassName="editor-class"
-          toolbarClassName="toolbar-class"
-        />
+      <div className="mb-5">
+            <label
+              for="title"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Article Title :
+            </label>
+            <input
+              className="w-[800px] mb-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              type="text"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+          <div className="text-black">
+          <Editor
+              editorState={editorState}
+              onEditorStateChange={setEditorState}
+              onFocus={() => setIsFocus(true)}
+              onBlur={() => setIsFocus(false)}
+              wrapperClassName="wrapper-class"
+              editorClassName="w-[800px] mb-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              editorStyle={customStyle}
+              toolbar={{
+                options: ['inline', 'blockType', 'list', 'textAlign', 'history'],
+              }}
+            />
+            </div>
         <button className="bg-emerald-500 py-1 px-5 rounded-md flex m-auto" type="submit">Update Post</button>
       </form>
+      </div>
       <Footer />
     </>
   );
