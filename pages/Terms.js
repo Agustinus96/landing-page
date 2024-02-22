@@ -5,11 +5,13 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Head from "next/head";
 
-export const getServerSideProps = async ({ locale }) => ({
-    props: {
-      ...(await serverSideTranslations(locale, ["terms"])),
-    },
-  });
+export async function getStaticProps({ locale }) {
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, ['terms'])), // Ensure 'common' is your default namespace
+      },
+    };
+  }
   
 
 const TermsPage = () => {
@@ -18,7 +20,6 @@ const TermsPage = () => {
   const { locale, pathname, asPath, query } = router;
 
   const sections = t("sections", { returnObjects: true });
-  console.log(sections);
 
   return (
     <>
