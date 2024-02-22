@@ -17,6 +17,8 @@ const TermsPage = () => {
   const router = useRouter();
   const { locale, pathname, asPath, query } = router;
 
+  const sections = t("sections", { returnObjects: true });
+
   return (
     <>
       <Navbar />
@@ -34,7 +36,7 @@ const TermsPage = () => {
         </h1>
         <p>{t("introduction")}</p>
         <div className="mt-6">
-          {t("sections", { returnObjects: true }).map((section, index) => (
+          {sections.map((section, index) => (
             <div key={index} className="mb-8">
               <h2 className="text-xl font-semibold leading-snug tracking-tight text-gray-800 lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white pb-3">
                 {locale === "en" ? `${section.section_id}. ` : `第 ${section.section_id} ` }
