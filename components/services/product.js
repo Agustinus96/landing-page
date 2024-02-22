@@ -8,6 +8,8 @@ import {
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
   SunIcon,
+  SparklesIcon,
+  UserGroupIcon
 } from "@heroicons/react/24/solid";
 
 const Products = (props) => {
@@ -19,6 +21,8 @@ const Products = (props) => {
     DevicePhoneMobileIcon: DevicePhoneMobileIcon,
     AdjustmentsHorizontalIcon: AdjustmentsHorizontalIcon,
     SunIcon: SunIcon,
+    SparklesIcon: SparklesIcon,
+    UserGroupIcon: UserGroupIcon
   };
   return (
     <>

@@ -87,11 +87,11 @@ const Navbar = () => {
                       href="https://app.gloxus.jp/register"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-emerald-600 rounded-md lg:ml-5"
                     >
-                      Get Started
+                      {locale === "en" ? "Get Started" : "登録"}
                     </Link>
                     <button
                       onClick={toggleLocale}
-                      className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5"
+                      className="w-full px-6 py-2 mt-3 text-center text-white bg-emerald-600 rounded-md lg:ml-5"
                     >
                       {locale === "en" ? "日本語" : "English"}
                     </button>
@@ -124,7 +124,7 @@ const Navbar = () => {
             href="https://app.gloxus.jp/register"
             className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5"
           >
-            Get Started
+            {locale === "en" ? "Get Started" : "登録"}
           </Link>
           <button
             onClick={toggleLocale}

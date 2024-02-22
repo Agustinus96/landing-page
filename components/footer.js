@@ -21,7 +21,7 @@ export default function Footer() {
   const legal = [
     { path: "/Terms", label: currentTranslation.Terms },
     { path: "/privacy_v1.pdf", label: currentTranslation.Privacy },
-    { path: "/Legal", label: currentTranslation.Legal },
+    // { path: "/Legal", label: currentTranslation.Legal },
   ];
   return (
     <div className="relative">
