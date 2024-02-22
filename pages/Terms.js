@@ -18,6 +18,7 @@ const TermsPage = () => {
   const { locale, pathname, asPath, query } = router;
 
   const sections = t("sections", { returnObjects: true });
+  console.log(sections);
 
   return (
     <>
