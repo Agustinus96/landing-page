@@ -5,6 +5,13 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Head from "next/head";
 
+export const getServerSideProps = async ({ locale }) => ({
+    props: {
+      ...(await serverSideTranslations(locale, ["terms"])),
+    },
+  });
+  
+
 const TermsPage = () => {
   const { t } = useTranslation("terms");
   const router = useRouter();
@@ -44,10 +51,5 @@ const TermsPage = () => {
   );
 };
 
-export const getServerSideProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["terms"])),
-  },
-});
 
 export default TermsPage;
