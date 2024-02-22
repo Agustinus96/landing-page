@@ -4,6 +4,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Head from "next/head";
+import Footer from "../components/footer";
+import PopupWidget from "../components/popupWidget";
 
 export async function getStaticProps({ locale }) {
     return {
@@ -51,6 +53,8 @@ const TermsPage = () => {
           ))}
         </div>
       </div>
+      <Footer/>
+      <PopupWidget/>
     </>
   );
 };
