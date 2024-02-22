@@ -7,17 +7,17 @@
         {
           "title": "雇用主としてのブランド構築",
           "desc": "最初から雇用主としての会社のブランドを構築します。",
-          "iconName": "FaceSmileIcon"
+          "icon": "FaceSmileIcon"
         },
         {
           "title": "マッチ率の向上",
           "desc": "より魅力的なプロセスは、ミスマッチの採用を減らします。",
-          "iconName": "ChartBarSquareIcon"
+          "icon": "ChartBarSquareIcon"
         },
         {
           "title": "雇用者の定着を促進",
           "desc": "ポジティブな採用体験は雇用者の離職率を減少させます。",
-          "iconName": "CursorArrowRaysIcon"
+          "icon": "CursorArrowRaysIcon"
         }
       ]
     },
@@ -29,17 +29,17 @@
         {
           "title": "AIの統合",
           "desc": "最新のAI技術を使用して、仕事の説明、メッセージ、FAQを生成します。",
-          "iconName": "DevicePhoneMobileIcon"
+          "icon": "DevicePhoneMobileIcon"
         },
         {
           "title": "主要なワークスペースの統合",
           "desc": "Google MeetやTeamsなどの主要なWeb会議プラットフォームの統合。",
-          "iconName": "AdjustmentsHorizontalIcon"
+          "icon": "AdjustmentsHorizontalIcon"
         },
         {
           "title": "候補者からのリアルタイムのフィードバック",
           "desc": "Gloxusは、候補者が採用体験に関するリアルなフィードバックを提供できるようにします。",
-          "iconName": "SunIcon"
+          "icon": "SunIcon"
         }
       ]
     }
