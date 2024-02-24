@@ -1,65 +1,56 @@
 {
-    "faqs": [
-      {
-        "question": "What is Gloxus?",
-        "answer": "Gloxus is a specialized SaaS platform designed to optimize the hiring process in Japan, focusing on cultural fit and efficiency."
-      },
-      {
-        "question": "How does Gloxus improve the hiring experience?",
-        "answer": "Our platform personalizes the hiring experience, emphasizing cultural alignment and efficiency, leading to more satisfying and effective recruitment outcomes for both employers and candidates."
-      },
-      {
-        "question": "Who can benefit from using Gloxus?",
-        "answer": "Gloxus is ideal for businesses of all sizes in Japan looking to streamline their recruitment process, as well as job seekers seeking a culturally aligned workplace."
-      },
-      {
-        "question": "Is Gloxus suitable for international companies hiring in Japan?",
-        "answer": "Yes, Gloxus is perfect for international companies looking to navigate the unique cultural and linguistic landscape of the Japanese job market."
-      },
-      {
-        "question": "How does Gloxus ensure a good cultural fit?",
-        "answer": "We utilize advanced algorithms and localized insights to match candidates with companies where they'll thrive, considering both skills and cultural nuances."
-      },
-      {
-        "question": "What languages does Gloxus support?",
-        "answer": "Gloxus supports both Japanese and English, facilitating seamless communication between employers and potential employees."
-      },
-      {
-        "question": "Is there a trial period for Gloxus?",
-        "answer": "Yes, we offer a trial period. Please contact us for more details on how to get started."
-      },
-      {
-        "question": "How does Gloxus handle data privacy and security?",
-        "answer": "We adhere to strict data privacy and security protocols to protect all user information on our platform."
-      },
-      {
-        "question": "Can Gloxus integrate with our existing HR systems?",
-        "answer": "Yes, Gloxus is designed to integrate seamlessly with a variety of HR systems to enhance your existing workflows."
-      },
-      {
-        "question": "How do I get started with Gloxus?",
-        "answer": "You can sign up directly on our website or contact our sales team for a personalized walkthrough of our platform."
-      },
-      {
-        "question": "What customer support does Gloxus offer?",
-        "answer": "We provide comprehensive customer support, including a dedicated help center, live chat, and email assistance."
-      },
-      {
-        "question": "Are there any customization options available in Gloxus?",
-        "answer": "Yes, Gloxus offers various customization options to tailor the platform to your specific hiring needs and preferences."
-      },
-      {
-        "question": "What makes Gloxus unique compared to other hiring platforms?",
-        "answer": "Gloxus is uniquely designed for the Japanese market, with a strong emphasis on cultural fit and bilingual support, setting it apart from other platforms."
-      },
-      {
-        "question": "How often is Gloxus updated with new features?",
-        "answer": "We continuously update Gloxus with new features and improvements based on user feedback and market trends."
-      },
-      {
-        "question": "How can I provide feedback or suggest features for Gloxus?",
-        "answer": "We value user feedback! You can submit your suggestions through our website or contact our support team directly."
-      }
-    ]
-  }
-  
+  "faqs": [
+    {
+      "question": "What is Gloxus?",
+      "answer": "Gloxus is a specialized SaaS platform designed to optimize the hiring process in Japan, focusing on cultural fit and efficiency."
+    },
+    {
+      "question": "How does Gloxus improve the hiring experience?",
+      "answer": "Our platform personalizes the hiring experience, emphasizing cultural alignment and efficiency, leading to more satisfying and effective recruitment outcomes for both employers and candidates."
+    },
+    {
+      "question": "What services does Gloxus offer?",
+      "answer": "Gloxus offers a seamless application process, built-in communication tools, insightful analytics and reporting, and a unique cultural fit consulting service to ensure candidates align with company culture."
+    },
+    {
+      "question": "How can I start using Gloxus for my company?",
+      "answer": "To start using Gloxus, you can sign up for our piloting program or contact our sales team for a personalized consultation and demonstration of our platform."
+    },
+    {
+      "question": "Who can benefit from using Gloxus?",
+      "answer": "Japanese companies, start-ups, and foreign businesses operating in Japan can all benefit from Gloxus by streamlining their recruitment processes, ensuring cultural fit, and enhancing overall hiring efficiency."
+    },
+    {
+      "question": "Can Gloxus be customized for specific company needs?",
+      "answer": "Yes, Gloxus offers customizable solutions to meet the unique needs of each company, ensuring the platform serves your specific recruitment requirements effectively."
+    },
+    {
+      "question": "How does Gloxus ensure a candidate's cultural fit?",
+      "answer": "Through our cultural fit consulting service, we assess candidates' compatibility with your company's culture and values, ensuring a harmonious match that promotes productivity and job satisfaction."
+    },
+    {
+      "question": "What support does Gloxus offer to its users?",
+      "answer": "Gloxus provides comprehensive support, including technical assistance, user training, and consultancy on recruitment strategies to ensure you get the most out of our platform."
+    },
+    {
+      "question": "What is the Gloxus piloting program?",
+      "answer": "The Gloxus piloting program allows selected companies to use our platform on a trial basis, providing feedback to help us refine our services and ensuring the platform meets your recruitment needs effectively."
+    },
+    {
+      "question": "How long does the piloting program last?",
+      "answer": "The duration of the piloting program varies, but typically it lasts between 3 to 6 months, allowing ample time to evaluate the platform's impact on your recruitment process."
+    },
+    {
+      "question": "Are there any costs involved in the piloting program?",
+      "answer": "The piloting program is offered at a reduced cost or, in some cases, free of charge, with the aim of gathering valuable user feedback and demonstrating the platform's benefits to potential customers."
+    },
+    {
+      "question": "How can I provide feedback during the piloting program?",
+      "answer": "Participants in the piloting program are encouraged to provide regular feedback through surveys, interviews, and direct communication with our support and development teams."
+    },
+    {
+      "question": "What happens after the piloting program ends?",
+      "answer": "After the piloting program, companies can choose to continue using Gloxus by subscribing to one of our plans, tailored to fit various business sizes and needs."
+    }
+  ]
+}
