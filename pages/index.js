@@ -24,6 +24,7 @@ export async function getStaticProps({ locale }) {
   };
 }
 
+
 const Home = () => {
   const data = useBenefitsData();
   const router = useRouter();
@@ -56,17 +57,17 @@ const Home = () => {
       </SectionTitle>
       <Benefits data={data.benefitOne} />
       <Benefits imgPos="right" data={data.benefitTwo} />
-      <SectionTitle pretitle={video.Pretitle} title={video.SubTitle}>
+      {/* <SectionTitle pretitle={video.Pretitle} title={video.SubTitle}>
         {video.Content}
-      </SectionTitle>
-      <Video />
-      <SectionTitle
+      </SectionTitle> */}
+      {/* <Video /> */}
+      {/* <SectionTitle
         pretitle={testimonial.Pretitle}
         title={testimonial.SubTitle}
       >
         {testimonial.Content}
-      </SectionTitle>
-      <Testimonials />
+      </SectionTitle> */}
+      {/* <Testimonials /> */}
       <SectionTitle pretitle={questions.Pretitle} title={questions.SubTitle}>
         {questions.Content}
       </SectionTitle>

@@ -16,7 +16,7 @@ const Navbar = () => {
     { path: "/Features", label: currentTranslation.Features },
     { path: "/Pricing", label: currentTranslation.Pricing },
     { path: "/Company", label: currentTranslation.Company },
-    { path: "/Blog", label: currentTranslation.Blog },
+    { path: "/News", label: currentTranslation.News },
   ];
 
   const toggleLocale = () => {
