@@ -8,20 +8,18 @@ import Navbar from '../../../components/navbar';
 import Footer from '../../../components/footer';
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
-import htmlToDraft from 'html-to-draftjs';
 
+// Dynamically import the Editor component to avoid SSR issues
 const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Editor), { ssr: false });
 
 const EditPost = () => {
   const [title, setTitle] = useState('');
-  const [tags, setTags] = useState(''); // New state for managing tags
+  const [tags, setTags] = useState('');
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const [isFocus, setIsFocus] = useState();
   const router = useRouter();
   const { customId } = router.query;
   const { data: session, status } = useSession();
 
-  // Custom styling can be defined here
   const customStyle = {height: "40vh", outline: "2px solid #3b82f6", borderRadius: "0.5rem"};
 
   useEffect(() => {
@@ -29,21 +27,23 @@ const EditPost = () => {
       router.push("/auth/signin");
     }
 
-    if (customId) {
-      fetch(`/api/posts/${customId}`)
-        .then(res => res.json())
-        .then(data => {
-          setTitle(data.title);
-          setTags(data.tags.join(', ')); // Assuming tags is an array, join it into a string
-          const blocksFromHtml = htmlToDraft(data.content);
-        if (blocksFromHtml) {
-          const { contentBlocks, entityMap } = blocksFromHtml;
-          const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
-          const editorState = EditorState.createWithContent(contentState);
-          setEditorState(editorState);
-        }
-        })
-        .catch(err => console.error("Failed to load post data:", err));
+    if (customId && typeof window !== "undefined") {
+      // Dynamically import html-to-draftjs only client-side
+      import('html-to-draftjs').then(htmlToDraft => {
+        fetch(`/api/posts/${customId}`)
+          .then(res => res.json())
+          .then(data => {
+            setTitle(data.title);
+            setTags(data.tags.join(', '));
+            const blocksFromHtml = htmlToDraft.default(data.content);
+            if (blocksFromHtml) {
+              const { contentBlocks, entityMap } = blocksFromHtml;
+              const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
+              setEditorState(EditorState.createWithContent(contentState));
+            }
+          })
+          .catch(err => console.error("Failed to load post data:", err));
+      });
     }
   }, [customId, router, status]);
 
