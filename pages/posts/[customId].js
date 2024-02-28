@@ -4,14 +4,10 @@ import Head from 'next/head';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
 import dynamic from 'next/dynamic';
+import DOMPurify from 'dompurify';
 import SectionTitle from '../../components/sectionTitle';
 import Content from '../../components/articleBody';
 import { useSession } from 'next-auth/react';
-
-const DOMPurify = dynamic(
-  () => import('dompurify').then((mod) => mod.default),
-  { ssr: false }
-);
 
 
 const Post = () => {
@@ -19,6 +15,8 @@ const Post = () => {
   const router = useRouter();
   const { customId } = router.query;
   const [post, setPost] = useState(null);
+
+
 
   useEffect(() => {
     if (customId) {
