@@ -52,7 +52,7 @@ const Post = () => {
       <Navbar />
       <article className="prose lg:prose-xl m-auto px-4">
         <h1 
-        className="max-w-[60vw] mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white"
+        className="m-auto text-center max-w-[55vw] mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white py-[7vh]"
         >{post.title}
         </h1>
         <div className="text-md tracking-wider dark:text-white text-black max-w-[60%] m-auto" dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
