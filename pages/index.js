@@ -82,7 +82,8 @@ const Home = () => {
       </div>
       {/* <Cta /> */}
       <Footer />
-      <PopupChat />
+      {/* <PopupChat /> */}
+      <PopupWidget />
     </>
   );
 };

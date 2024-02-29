@@ -10,6 +10,7 @@ import SectionTitle from "../components/sectionTitle";
 import Footer from "../components/footer";
 import PopupWidget from "../components/popupWidget";
 import "../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { useEffect } from "react";
 
 const Editor = dynamic(
   () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
@@ -39,6 +40,11 @@ export default function EditorPage() {
     ? { height: "40vh", outline: "2px solid #3b82f6", borderRadius: "0.5rem" }
     : { height: "40vh", borderRadius: "0.5rem" };
 
+    useEffect(() => {
+      if (status === "unauthenticated") {
+        router.push("/auth/signin");
+      }}, [status])
+
   const handleTagChange = (tag) => {
     setSelectedTags((prevTags) =>
       prevTags.includes(tag)
@@ -52,9 +58,8 @@ export default function EditorPage() {
     const rawContentState = convertToRaw(editorState.getCurrentContent());
     const content = draftToHtml(rawContentState);
 
-    if (!session) {
-      console.error("You must be logged in to submit a post.");
-      return;
+    if (status === "unauthenticated") {
+      router.push("/auth/signin");
     }
 
     const res = await fetch("/api/posts", {
@@ -91,7 +96,7 @@ export default function EditorPage() {
             </label>
             <input
               id="title"
-              className="input-field"
+              className="mt-1 block w-full rounded-md border-solid dark:border-gray-300 ring-gray-800 border-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2 px-2"
               type="text"
               placeholder="Title"
               value={title}
@@ -125,7 +130,13 @@ export default function EditorPage() {
           </fieldset>
 
           {/* Editor */}
-          <div className="editor-container">
+          <div className="editor-container text-black">
+          <label
+              htmlFor="title"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Contents :
+            </label>
             <Editor
               editorState={editorState}
               onEditorStateChange={setEditorState}
