@@ -7,6 +7,7 @@ import SectionTitle from "../components/sectionTitle";
 import { useFeaturesData } from "../components/features/data";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from "next-i18next";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -22,6 +23,14 @@ const feature = () => {
   return (
     <> 
     <Navbar />
+    <Head>
+        <title>Features</title>
+        <meta
+          name="description"
+          content="Other services we provide at Gloxus"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
     <SectionTitle
         title={t("featureTitle")}>
           {t("featureHeading")}

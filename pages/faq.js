@@ -7,6 +7,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import PopupWidget from "../components/popupWidget";
 import { useTranslation } from 'next-i18next';
 import { useRouter } from "next/router";
+import Head from "next/head";
 import translations from "../components/translation/navbarTranslation";
 
 export function useServicesData() {
@@ -23,6 +24,14 @@ const Faq = () => {
   return (
     <> 
     <Navbar />
+    <Head>
+        <title>FAQ</title>
+        <meta
+          name="description"
+          content="FAQ - Frequently asked questions"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
     <Container>
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
         {faqData.faqs.map((item, index) => (

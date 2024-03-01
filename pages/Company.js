@@ -9,6 +9,7 @@ import PopupWidget from '../components/popupWidget'
 import Company from '../components/company/company'
 import { founder } from '../components/company/teams-data'
 import Teams from '../components/company/teams'
+import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 []
 export async function getStaticProps({ locale }) {
@@ -22,6 +23,14 @@ export async function getStaticProps({ locale }) {
 const Pricing = () => {
     return (
         <> 
+        <Head>
+        <title>Company Profile</title>
+        <meta
+          name="description"
+          content="Other services we provide at Gloxus"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Navbar />
         <Company />
         {/* <Teams data={founder}/> */}
