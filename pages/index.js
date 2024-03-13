@@ -12,14 +12,13 @@ import PopupWidget from "../components/popupWidget";
 import Link from "next/link";
 import PopupChat from "../components/popupChat";
 import { useBenefitsData } from "../components/data";
-import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])), // Ensure 'common' is your default namespace
+      ...(await serverSideTranslations(locale, ['common'])), // Ensure 'common' is your default namespace
     },
   };
 }
@@ -27,7 +26,7 @@ export async function getStaticProps({ locale }) {
 
 const Home = () => {
   const data = useBenefitsData();
-  const router = useRouter();
+  // const router = useRouter();
 
   const { t } = useTranslation("common");
 

@@ -11,6 +11,14 @@ import { priceOne, priceTwo } from "../components/pricing/pricing-data";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next'
 
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}
+
 
 const Pricing = () => {
   const { t } = useTranslation('common');
@@ -50,14 +58,6 @@ const Pricing = () => {
       <Footer/>
       </>
       );
-    }
-
-    export async function getServerSideProps({ locale }) {
-      return {
-        props: {
-          ...(await serverSideTranslations(locale, ['common'])),
-        },
-      };
     }
     
 
