@@ -41,14 +41,6 @@ const Home = () => {
           content="Gloxus is a new generation hiring platform service."
         />
         <link rel="icon" href="/favicon.ico" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NPV552C8" />
-        <Script dangerouslySetInnerHTML={{
-          __html: `          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-H0NPV552C8');`,
-        }} />
       </Head>
 
       <Navbar />
