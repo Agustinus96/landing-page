@@ -2,15 +2,12 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
-import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
-import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Link from "next/link";
-import PopupChat from "../components/popupChat";
+import Script from 'next/script'
 import { useBenefitsData } from "../components/data";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -44,14 +41,14 @@ const Home = () => {
           content="Gloxus is a new generation hiring platform service."
         />
         <link rel="icon" href="/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NPV552C8"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NPV552C8" />
+        <Script dangerouslySetInnerHTML={{
+          __html: `          window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
 
-          gtag('config', 'G-H0NPV552C8');
-        </script>
+          gtag('config', 'G-H0NPV552C8');`,
+        }} />
       </Head>
 
       <Navbar />
