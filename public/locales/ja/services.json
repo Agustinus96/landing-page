@@ -1,46 +1,68 @@
 {
-    "productOne": {
-        "title": "採用プラットフォーム",
-        "desc": "全員向けの一貫した採用サービス。企業、人材紹介会社、個人に価値を提供します。",
-        "image": "/img/platform.png",
-        "bullets": [
-            {
-                "title": "雇用主ブランドの構築",
-                "desc": "初めから企業の魅力を築きます。",
-                "icon": "SparklesIcon"
-            },
-            {
-                "title": "マッチング率向上",
-                "desc": "魅力的なプロセスで不一致を減らす。",
-                "icon": "ChartBarSquareIcon"
-            },
-            {
-                "title": "雇用維持",
-                "desc": "良好な採用体験が離職率を下げます。",
-                "icon": "UserGroupIcon"
-            }
-        ]
-    },
-    "productTwo": {
-        "title": "合理化されたプラットフォーム",
-        "desc": "新技術で採用プロセスをスムーズにし、問題を解決します。",
-        "image": "/img/hiring-management.png",
-        "bullets": [
-            {
-                "title": "AI統合",
-                "desc": "最新AIで職務記述やFAQを生成。",
-                "icon": "DevicePhoneMobileIcon"
-            },
-            {
-                "title": "ワークスペース統合",
-                "desc": "Google MeetやTeamsなどの統合。",
-                "icon": "AdjustmentsHorizontalIcon"
-            },
-            {
-                "title": "リアルタイムフィードバック",
-                "desc": "採用体験についての実際のフィードバックを提供。",
-                "icon": "SunIcon"
-            }
-        ]
-    }
+  "productOne": {
+    "title": "採用プラットフォーム",
+    "desc": "全員向けの一貫した採用サービス。企業、人材紹介会社、個人に価値を提供します。",
+    "image": "/img/platform.png",
+    "bullets": [
+      {
+        "title": "雇用主ブランドの構築",
+        "desc": "初めから企業の魅力を築きます。",
+        "icon": "SparklesIcon"
+      },
+      {
+        "title": "マッチング率向上",
+        "desc": "魅力的なプロセスで不一致を減らす。",
+        "icon": "ChartBarSquareIcon"
+      },
+      {
+        "title": "雇用維持",
+        "desc": "良好な採用体験が離職率を下げます。",
+        "icon": "UserGroupIcon"
+      }
+    ]
+  },
+  "productTwo": {
+    "title": "合理化されたプラットフォーム",
+    "desc": "新技術で採用プロセスをスムーズにし、問題を解決します。",
+    "image": "/img/hiring-management.png",
+    "bullets": [
+      {
+        "title": "AI統合",
+        "desc": "最新AIで職務記述やFAQを生成。",
+        "icon": "DevicePhoneMobileIcon"
+      },
+      {
+        "title": "ワークスペース統合",
+        "desc": "Google MeetやTeamsなどの統合。",
+        "icon": "AdjustmentsHorizontalIcon"
+      },
+      {
+        "title": "リアルタイムフィードバック",
+        "desc": "採用体験についての実際のフィードバックを提供。",
+        "icon": "SunIcon"
+      }
+    ]
+  },
+  "productThree": {
+    "title": "特定技能労働者の採用",
+    "desc": "当プラットフォームを通じて、日本の企業と海外の特定技能労働者がお互いに見つける手助けをします。",
+    "image": "/img/recruitment.png",
+    "bullets": [
+      {
+        "title": "特定技能労働者データベース",
+        "desc": "元技術実習生および現在の特定技能労働者の大規模なデータベース。",
+        "icon": "Database"
+      },
+      {
+        "title": "完全に効率化されたデータシステム",
+        "desc": "アクセスしやすいように単純化された労働者データベースで、履歴書をダッシュボードでより見やすくなる。",
+        "icon": "ClipboardDocument"
+      },
+      {
+        "title": "最適化された求人/候補者検索",
+        "desc": "候補者検索を最適化するためのAI統合。",
+        "icon": "MagnifyingGlass"
+      }
+    ]
+  }
 }

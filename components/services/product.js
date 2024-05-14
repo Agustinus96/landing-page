@@ -9,7 +9,11 @@ import {
   AdjustmentsHorizontalIcon,
   SunIcon,
   SparklesIcon,
-  UserGroupIcon
+  UserGroupIcon,
+  BriefcaseIcon,
+  ClipboardDocumentCheckIcon,
+  MagnifyingGlassIcon,
+  CircleStackIcon
 } from "@heroicons/react/24/solid";
 
 const Products = (props) => {
@@ -22,7 +26,11 @@ const Products = (props) => {
     AdjustmentsHorizontalIcon: AdjustmentsHorizontalIcon,
     SunIcon: SunIcon,
     SparklesIcon: SparklesIcon,
-    UserGroupIcon: UserGroupIcon
+    UserGroupIcon: UserGroupIcon,
+    Briefcase: BriefcaseIcon,
+    ClipboardDocument: ClipboardDocumentCheckIcon,
+    MagnifyingGlass: MagnifyingGlassIcon,
+    Database: CircleStackIcon
   };
   return (
     <>

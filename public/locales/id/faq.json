@@ -1,0 +1,56 @@
+{
+  "faqs": [
+    {
+      "question": "Apa itu Gloxus?",
+      "answer": "Gloxus adalah sebuah SaaS platform yang dibangun dengan tujuan untuk mengoptimikasi proses perekrutan pekerja yang berfokus pada personalisasi hiring experience."
+    },
+    {
+      "question": "Bagaimana Gloxus memperbarui hiring experience?",
+      "answer": "Platform kami merubah proses digital hiring dari sistematik ke personalized experience. Kami berusaha untuk menyediakan platform dimana perusahaan dan kandidate bisa saling mengerti tentang kebutuhan mereka masing-masing. Dengan demikian proses rekrutmne akan menjadi lebih baik dan cocok untuk semua pihak."
+    },
+    {
+      "question": "Apa saja layanan Gloxus?",
+      "answer": "Gloxus memberikan banyak layanan dari Foreign Hiring Consultancy untuk perusahaan Jepang, Hiring Experience Platform dan Jasa pencarian Special Skilled Worker di Indonesia untuk di bekerja di Jepang."
+    },
+    {
+      "question": "Bagaimana cara daftar dan mulai menggunakan Gloxus?",
+      "answer": "Untuk Hiring Experience Platform kami masih ada di tahap development, untuk cara bergabung ke piloting program kami atau ingin tanya-tanya, kalian bisa kirim email ke info@gloxus.jp."
+    },
+    {
+      "question": "Who can benefit from using Gloxus?",
+      "answer": "Japanese companies, start-ups, and foreign businesses operating in Japan can all benefit from Gloxus by streamlining their recruitment processes, ensuring cultural fit, and enhancing overall hiring efficiency."
+    },
+    {
+      "question": "Can Gloxus be customized for specific company needs?",
+      "answer": "Yes, Gloxus offers customizable solutions to meet the unique needs of each company, ensuring the platform serves your specific recruitment requirements effectively."
+    },
+    {
+      "question": "How does Gloxus ensure a candidate's cultural fit?",
+      "answer": "Through our cultural fit consulting service, we assess candidates' compatibility with your company's culture and values, ensuring a harmonious match that promotes productivity and job satisfaction."
+    },
+    {
+      "question": "What support does Gloxus offer to its users?",
+      "answer": "Gloxus provides comprehensive support, including technical assistance, user training, and consultancy on recruitment strategies to ensure you get the most out of our platform."
+    },
+    {
+      "question": "What is the Gloxus piloting program?",
+      "answer": "The Gloxus piloting program allows selected companies to use our platform on a trial basis, providing feedback to help us refine our services and ensuring the platform meets your recruitment needs effectively."
+    },
+    {
+      "question": "How long does the piloting program last?",
+      "answer": "The duration of the piloting program varies, but typically it lasts between 3 to 6 months, allowing ample time to evaluate the platform's impact on your recruitment process."
+    },
+    {
+      "question": "Are there any costs involved in the piloting program?",
+      "answer": "The piloting program is offered at a reduced cost or, in some cases, free of charge, with the aim of gathering valuable user feedback and demonstrating the platform's benefits to potential customers."
+    },
+    {
+      "question": "How can I provide feedback during the piloting program?",
+      "answer": "Participants in the piloting program are encouraged to provide regular feedback through surveys, interviews, and direct communication with our support and development teams."
+    },
+    {
+      "question": "What happens after the piloting program ends?",
+      "answer": "After the piloting program, companies can choose to continue using Gloxus by subscribing to one of our plans, tailored to fit various business sizes and needs."
+    }
+  ]
+}

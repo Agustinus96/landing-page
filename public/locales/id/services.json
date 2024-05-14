@@ -1,22 +1,22 @@
 {
     "productOne" : {
     "title": "Hiring platform",
-    "desc": "End-to-end hiring platform for everyone. Whether you are a company looking to hire, recruitment company or individual candidate, we provide value for everyone.",
+    "desc": "End-to-end hiring platform untuk perusahaan yang mencari pekerja dan orang-orang yang mencari pekerjaan.",
     "image": "/img/platform.png",
     "bullets": [
       {
-        "title": "Build a brand as an employer",
-        "desc": "Building company brand as employer from the get-go.",
+        "title": "Bangun brand sebagai perusahaan",
+        "desc": "Mulai bangun brand sebagai perusahaan di mata calon pekerja",
         "icon": "SparklesIcon"
       },
       {
-        "title": "Improve match rate",
-        "desc": "More engaging process means less mis-matched hire.",
+        "title": "Meningkatkan kecocokan antara perusahaan dan pekerja",
+        "desc": "Proses yang lebih menarik bisa mengurangi mis-match di proses perekrutan.",
         "icon": "ChartBarSquareIcon"
       },
       {
-        "title": "Drive employees retention",
-        "desc": "Possitive hiring experience decrease employer turnover rate.",
+        "title": "Mendorong retensi pekerja",
+        "desc": "Pengalaman perekrutan yang positif menurunkan tingkat pergantian karyawan.",
         "icon": "UserGroupIcon"
       }
     ]
@@ -44,23 +44,23 @@
     ]
     },
     "productThree" : {
-      "title": "Special Skilled Worker recruitment",
-      "desc": "Helping Japanese companies and overseas Special Skill Workers finding each other through our platform.",
+      "title": "Perekrutan Pekerja Tokutei Ginou",
+      "desc": "Membantu perusahaan Jepang mencari calon pekerja berketerampilann khusus dari Indonesia",
       "image": "/img/recruitment.png",
       "bullets": [
         {
-          "title": "Special Skilled Worker Database",
-          "desc": "A large databse of former Technical Students and current Special Skilled Workers.",
+          "title": "Database Tokutei Ginou",
+          "desc": "Database besar menampung informasi calon pekerja di Indonesia.",
           "icon": "Database"
         },
         {
-          "title": "Fully streamlined data system",
-          "desc": "Simplified worker database for ease of access, removing the cluttered view of resume.",
+          "title": "Portofolio yang simple",
+          "desc": "Profil setiap calon pekerja yang simple dan mudah dimekerti.",
           "icon": "ClipboardDocument"
         },
         {
-          "title": "Optimized job/candidate searching",
-          "desc": "AI integration to optimize candidate search.",
+          "title": "Searching system yang efisien",
+          "desc": "Dengan system terbaru dan AI, proses pencarian calon pekerja menjadi lebih simple.",
           "icon": "MagnifyingGlass"
         }
       ]

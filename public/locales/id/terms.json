@@ -1,0 +1,82 @@
+{
+    "title": "Terms and Conditions",
+    "introduction": "These Terms and Conditions (hereafter referred to as 'the Terms') govern the use of services (hereafter referred to as 'the Service') provided on this website by Global Nexus (hereafter referred to as 'the Company'). By using the Service, users (hereafter referred to as 'Users') agree to be bound by these Terms.",
+    "sections": [
+      {
+        "section_id": 1,
+        "title": "Application",
+        "content": "These Terms apply to all relations related to the use of the Service between the User and the Company. In addition to these Terms, the Company may set various provisions (hereafter referred to as 'Individual Provisions') such as rules for using the Service. These Individual Provisions, regardless of their name, constitute a part of these Terms. In case of any conflict between the provisions of these Terms and the Individual Provisions, the Individual Provisions will prevail unless otherwise specified."
+      },
+      {
+        "section_id": 2,
+        "title": "Registration",
+        "content": "For using the Service, registration is completed when an applicant agrees to these Terms and applies for registration in the manner prescribed by the Company, and the Company approves this application. The Company may refuse to approve the application for registration if there are certain reasons, without any obligation to disclose those reasons."
+      },
+      {
+        "section_id": 3,
+        "title": "User ID and Password Management",
+        "content": "Users are responsible for appropriately managing their user ID and password for the Service. Users must not transfer or lend their user ID and password to a third party or share them with a third party. The Company will consider the use of the service through a matching user ID and password combination as use by the user who registered that user ID."
+      },
+      {
+        "section_id": 4,
+        "title": "Fees and Payment",
+        "content": "Users shall pay the fees for the paid part of the Service as separately determined and displayed on the website by the Company, using the method specified by the Company."
+      },
+      {
+        "section_id": 5,
+        "title": "Prohibitions",
+        "content": "Users must not engage in any act that violates laws, public order, or is related to criminal activity; infringes on the copyrights, trademarks, or other intellectual property rights of the Service content; or any other acts deemed inappropriate by the Company."
+      },
+      {
+        "section_id": 6,
+        "title": "Service Provision Suspension",
+        "content": "The Company may suspend or interrupt the provision of all or part of the Service without prior notice to the User if certain conditions are met, such as system maintenance or in case of force majeure events."
+      },
+      {
+        "section_id": 7,
+        "title": "Use Restriction and Registration Cancellation",
+        "content": "The Company can restrict the use of the Service or cancel a User's registration without prior notice if the User violates any of these Terms, among other reasons."
+      },
+      {
+        "section_id": 8,
+        "title": "Withdrawal",
+        "content": "Users can withdraw from the Service according to the withdrawal procedures established by the Company."
+      },
+      {
+        "section_id": 9,
+        "title": "Disclaimer and Limitation of Liability",
+        "content": "The Company does not guarantee the Service is free from defects (including but not limited to safety, reliability, accuracy, completeness, effectiveness, fitness for a particular purpose, security errors, bugs, rights infringement). The Company is not responsible for any damages caused to the User arising from the use of the Service, except in cases of intentional or gross negligence."
+      },
+      {
+        "section_id": 10,
+        "title": "Changes to the Service",
+        "content": "The Company may change, add, or terminate the Service content with prior notice to the User, and the User agrees to accept such changes."
+      },
+      {
+        "section_id": 11,
+        "title": "Changes to Terms and Conditions",
+        "content": "The Company can change these Terms without the individual consent of the User under certain conditions, including when the change benefits the general interest of the Users."
+      },
+      {
+        "section_id": 12,
+        "title": "Handling of Personal Information",
+        "content": "The Company will handle personal information obtained through the use of the Service in accordance with the Company's Privacy Policy."
+      },
+      {
+        "section_id": 13,
+        "title": "Notifications or Communications",
+        "content": "Notifications or communications between the User and the Company shall be made in the manner prescribed by the Company."
+      },
+      {
+        "section_id": 14,
+        "title": "Assignment of Rights and Obligations",
+        "content": "The User may not assign or offer as collateral any rights or obligations under the service contract or these Terms without prior written consent from the Company."
+      },
+      {
+        "section_id": 15,
+        "title": "Governing Law and Jurisdiction",
+        "content": "These Terms shall be governed by the laws of Japan. Any disputes related to the Service shall be submitted to the exclusive jurisdiction of the court located in the place where the Company's head office is located."
+      }
+    ]
+  }
+  

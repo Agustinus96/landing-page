@@ -1,0 +1,47 @@
+{
+  "featureOne": {
+    "title": "Personalisasi Hiring Experience",
+    "desc": "Tingkat customability yang tinggi untuk setiap proses perekrutan. Kami menyediakan platform di mana employer dan kandidat bisa saling mengenal lebih baik dari awal, meningkatkan efisiensi hiring di pasar yang kompetitif ini.",
+    "image": "/img/hiring-experience.jpg",
+    "bullets": [
+      {
+        "title": "Membangun Brand sebagai Employer",
+        "desc": "Membangun brand perusahaan sebagai employer dari awal.",
+        "icon": "FaceSmileIcon"
+      },
+      {
+        "title": "Meningkatkan Match Rate",
+        "desc": "Proses yang lebih engaging berarti lebih sedikit mis-matched hire.",
+        "icon": "ChartBarSquareIcon"
+      },
+      {
+        "title": "Mendorong Retensi Employer",
+        "desc": "Pengalaman hiring yang positif mengurangi turnover rate employer.",
+        "icon": "CursorArrowRaysIcon"
+      }
+    ]
+  },
+
+  "featureTwo": {
+    "title": "Platform yang Lebih Efisien",
+    "desc": "Mengintegrasikan teknologi baru untuk memperhalus proses hiring dan mengurangi proses yang rumit yang mengganggu scene hiring di Jepang.",
+    "image": "/img/hiring-management.png",
+    "bullets": [
+      {
+        "title": "Integrasi AI",
+        "desc": "Menghasilkan job description, pesan, dan FAQ menggunakan teknologi AI terbaru.",
+        "icon": "DevicePhoneMobileIcon"
+      },
+      {
+        "title": "Integrasi Ruang Kerja Utama",
+        "desc": "Integrasi platform web-meeting besar seperti Google Meet dan Teams.",
+        "icon": "AdjustmentsHorizontalIcon"
+      },
+      {
+        "title": "Feedback Real-time dari Kandidat",
+        "desc": "Gloxus memungkinkan kandidat untuk memberikan real-feedback tentang pengalaman hiring mereka.",
+        "icon": "SunIcon"
+      }
+    ]
+  }
+}

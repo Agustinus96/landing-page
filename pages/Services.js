@@ -34,6 +34,8 @@ const heroService = () => {
       </Head>
       <HeroServices />
       <Products data={data.productOne}/>
+      <Products data={data.productThree}
+      imgPos={"right"}/>
     <Footer />
     <PopupWidget />
     </>

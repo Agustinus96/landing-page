@@ -1,0 +1,38 @@
+{
+  "Section": "bagian utama",
+  "heroTitle": "Konsultasi Perekrutan",
+  "heroDescription": "Merekrut kandidat yang tepat untuk sebuah pekerjaan sangat sulit, terutama dalam budaya pasar Jepang. Yang lebih sulit lagi adalah menjaga talenta hebat agar tidak meninggalkan perusahaan terlalu dini. Kami di sini untuk membantu Anda melalui negosiasi kontrak kerja, aplikasi visa, dan banyak lagi.",
+  "contactUs": "Hubungi kami!",
+  "featureTitle": "Layanan Kami",
+  "featureHeading": "Kami percaya pada pentingnya sistem yang efisien dan pengalaman perekrutan yang sangat menarik dan positif.",
+  "more": "tampilkan lebih banyak",
+  "pleaseContact": "Hubungi kami!",
+  "callAction": "Kami masih dalam tahap pra-rilis pengembangan kami. Namun, kami dengan senang hati akan menyediakan layanan kami dengan tarif diskon atau Gratis* dengan syarat mendapatkan umpan balik dari Anda.",
+  "HomeTitle": "Gloxus - Pengalaman Perekrutan Personalisasi",
+
+  "GloxusBenefits": {
+    "Pretitle": "Manfaat Gloxus",
+    "SubTitle": "Mengapa Anda harus menggunakan platform kami",
+    "Content": "Gloxus mengubah perekrutan di Jepang, menawarkan pengalaman berkualitas dan personalisasi bagi pemberi kerja dan kandidat, meningkatkan efisiensi dan kesesuaian budaya untuk hasil perekrutan yang lebih efektif dan memuaskan."
+  },
+  "Video": {
+    "Pretitle": "Tonton video",
+    "SubTitle": "Lihat platform kami bekerja",
+    "Content": "Buatlah video"
+  },
+  "Testimonials": {
+    "Pretitle": "Testimoni Masa Depan",
+    "SubTitle": "Merilis Uji Coba Tertutup",
+    "Content": " Kami mencari mitra untuk berpartisipasi dalam rilis MVP terbatas kami. Umpan balik Anda sangat penting bagi kami untuk mengembangkan platform ini lebih lanjut dan memastikan bahwa produk kami sesuai dengan kebutuhan Anda."
+  },
+  "FAQ": {
+    "Pretitle": "FAQ",
+    "SubTitle": "Pertanyaan yang Sering Diajukan",
+    "Content": "Jawab pertanyaan pelanggan Anda di sini, hal ini akan meningkatkan tingkat konversi serta permintaan dukungan atau chat."
+  },
+  "Company": {
+    "StoryTitle": "Kisah Kami",
+    "StoryContent": "Gloxus muncul dari keinginan untuk memanusiakan proses perekrutan, mengakui bahwa koneksi pribadi di awal dapat meningkatkan kesuksesan perekrutan dan kesetiaan karyawan. Kami melihat bagaimana branding perusahaan, yang ditenun ke dalam tahap awal ini, sangat mempengaruhi perjalanan kandidat. Misi kami? Untuk membuat setiap perekrutan tidak hanya sebagai transaksi, tetapi sebagai awal yang berarti.",
+    "StoryLearn": "Pelajari lebih lanjut"
+  }
+}

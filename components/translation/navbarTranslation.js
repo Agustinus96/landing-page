@@ -32,6 +32,22 @@ const translations = {
       "Gloxusは日本における採用の新しいアプローチの先駆者です。利用可能な候補者がますます少なくなる日本の採用シーンに価値をもたらすため、魅力的でパーソナライズされた採用体験を提供することを目指しています。",
     Learn: "詳しく"
     },
+    id: {
+      Services: "Layanan",
+      Features: "Fitur",
+      Pricing: "Pricing",
+      Company: "Perusahaan",
+      News: "Blog",
+      GetStarted: "Get Started",
+      Terms: "Syarat dan Ketentuan",
+      Privacy: "Privasi",
+      Legal: "Legal",
+      Follow: "Follow us",
+      Headline: "Different Approach",
+      Intro:
+        "Gloxus adalah pelopor hiring experience di Jepang. Goal kami adalah memberikan pengalaman yang menarik dan personal pada setiap proses perekrutan demi menambah value pada dunia perekrutan.",
+      Learn: "Learn more"
+      },
   // Add other languages as needed
 };
 

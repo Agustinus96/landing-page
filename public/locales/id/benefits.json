@@ -1,0 +1,46 @@
+{
+  "benefitOne": {
+    "title": "Personalisasi Hiring Experience",
+    "desc": "Tingkat penyesuaian yang tinggi untuk setiap proses perekrutan. Kami menyediakan platform di mana pemberi kerja dan kandidat dapat saling mengenal lebih baik sejak awal, meningkatkan efisiensi perekrutan di pasar yang kompetitif ini.",
+    "image": "/img/benefit-one.png",
+    "bullets": [
+      {
+        "title": "Membangun merek sebagai pemberi kerja",
+        "desc": "Membangun merek perusahaan sebagai pemberi kerja sejak awal.",
+        "icon": "FaceSmileIcon"
+      },
+      {
+        "title": "Meningkatkan tingkat kecocokan",
+        "desc": "Proses yang lebih menarik berarti lebih sedikit kesalahan dalam perekrutan.",
+        "icon": "ChartBarSquareIcon"
+      },
+      {
+        "title": "Mendorong retensi pekerja",
+        "desc": "Pengalaman perekrutan yang positif mengurangi tingkat berhentinya pekerja.",
+        "icon": "CursorArrowRaysIcon"
+      }
+    ]
+  },
+  "benefitTwo": {
+    "title": "Platform Terintegrasi",
+    "desc": "Mengintegrasikan teknologi baru untuk memperlancar proses perekrutan dan mengurangi proses yang rumit yang mengganggu skena perekrutan di Jepang.",
+    "image": "/img/benefit-two.png",
+    "bullets": [
+      {
+        "title": "Integrasi AI",
+        "desc": "Menghasilkan deskripsi pekerjaan, pesan, dan FAQ menggunakan teknologi AI terkini.",
+        "icon": "DevicePhoneMobileIcon"
+      },
+      {
+        "title": "Integrasi web-meeting platform",
+        "desc": "Integrasi platform web-meeting besar seperti Google Meet dan Teams.",
+        "icon": "AdjustmentsHorizontalIcon"
+      },
+      {
+        "title": "Realtime feedback dari kandidat",
+        "desc": "Gloxus memungkinkan kandidat untuk memberikan umpan balik nyata tentang pengalaman perekrutan mereka.",
+        "icon": "SunIcon"
+      }
+    ]
+  }
+}
