@@ -36,11 +36,16 @@ const Home = () => {
     <>
       <Head>
         <title>{t("HomeTitle")}</title>
-        <meta
-          name="description"
-          content="Gloxus is a new generation hiring platform service."
-        />
+        <meta name="description" content={t("HomeDescription")} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={t("HomeTitle")} />
+        <meta property="og:description" content={t("HomeDescription")} />
+        <meta property="og:url" content="https://gloxus.jp" />
+        <meta property="og:site_name" content="Gloxus" />
+        <meta property="article:modified_time" content="2024-05-29T14:40:42+00:00" />
         <link rel="icon" href="/favicon.ico" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H0NPV552C8"></script>
         <script dangerouslySetInnerHTML={{
           __html: `          window.dataLayer = window.dataLayer || [];
@@ -53,6 +58,11 @@ const Home = () => {
 
       <Navbar />
       <Hero />
+
+      <p hidden>{t("SeoContent1")}</p>
+      <p hidden>{t("SeoContent2")}</p>
+      <h2 hidden>{t("SeoContent3")}</h2>
+
       <SectionTitle
         pretitle={gloxusBenefits.Pretitle}
         title={gloxusBenefits.SubTitle}
