@@ -24,6 +24,10 @@ const Navbar = () => {
     router.push({ pathname, query }, asPath, { locale: newLocale });
   };
 
+  const handleSelect = (selectedData) => {
+    router.push({ pathname, query }, asPath, { locale: selectedData });
+  };
+
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
@@ -87,14 +91,13 @@ const Navbar = () => {
                       href="https://app.gloxus.jp/register"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-emerald-600 rounded-md lg:ml-5"
                     >
-                      {locale === "en" ? "Get Started" : "登録"}
+                      {locale === "en" ? "Get Started" : (locale === "ja" ? "登録" : "Mulai")}
                     </Link>
-                    <button
-                      onClick={toggleLocale}
-                      className="w-full px-6 py-2 mt-3 text-center text-white bg-emerald-600 rounded-md lg:ml-5"
-                    >
-                      {locale === "en" ? "日本語" : "English"}
-                    </button>
+                    <select name="forma" onChange={(val) => handleSelect(val.target.value)} class="w-full px-6 py-2 mt-3 text-center text-white bg-emerald-600 rounded-md lg:ml-5">
+                      <option value="en">English</option>
+                      <option value="ja">日本語</option>
+                      <option value="id">Indonesian</option>
+                    </select>
                   </>
                 </Disclosure.Panel>
               </div>
@@ -122,16 +125,16 @@ const Navbar = () => {
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
             href="https://app.gloxus.jp/register"
-            className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5"
+            className="px-4 py-2 text-white bg-emerald-600 rounded-md md:ml-5"
           >
-            {locale === "en" ? "Get Started" : "登録"}
+            {locale === "en" ? "Get Started" : (locale === "ja" ? "登録" : "Mulai")}
           </Link>
-          <button
-            onClick={toggleLocale}
-            className="px-6 py-2 text-white bg-emerald-600 rounded-md md:ml-5 hover:bg-emerald-700"
-          >
-            {locale === "en" ? "日本語" : "English"}
-          </button>
+
+          <select name="forma" onChange={(val) => handleSelect(val.target.value)}class="px-2 py-2 text-white bg-emerald-600 rounded-md md:ml-5">
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="id">Indonesian</option>
+          </select>
           <ThemeChanger />
         </div>
       </nav>
